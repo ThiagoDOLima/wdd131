@@ -2,72 +2,86 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>WDD 131 - Fundamentos da Web Dinâmica - Thiago Lima</title>
     <meta name="description" content="Thiago Lima explora os fundamentos da Web Dinâmica no curso WDD 131, utilizando HTML, CSS e JavaScript para criar páginas interativas e responsivas.">
     <meta name="author" content="Thiago de Oliveira Lima">
     <link rel="stylesheet" href="estilos/base.css">
+
+    <!-- Fontes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body class="container">
     <header>
         <div class="content-header">
             <span id="course-title">
-                WDD 131 - Fundamentos da Web Dinâmica
+                WDD 131: Fundamentos da Web Dinâmica - Thiago O. Lima
             </span>
         </div>
         <nav>
             <ul class="navigation">
                 <li>
-                    <a href="index.html">Página Inicial</a>
+                    <a href="https:www.linkedin.com/in/thiagooliveiralima">LinkedIn</a>
                 </li>
                 <li>
-                    <a href="projetos.html">Projetos</a>
+                    <a href="https://byupw.instructure.com/">Canvas</a>
                 </li>
                 <li>
-                    <a href="servicos.html">Serviços</a>
+                    <a href="https://www.churchofjesuschrist.org/study/scriptures?lang=por">Escritura</a>
                 </li>
                 <li>
-                    <a href="contato.html">Fale Conosco</a>
+                    <a href="contato.html">Projeto Final</a>
                 </li>
             </ul>
         </nav>
     </header>
-    <div class="conteiner">
+    <div id="nome">
+        <p>Thiago de Oliveira Lima</p>
+    </div>
+    <div class="conteinercentral">
+        <div class="conteiner">
         <main>
-            <h1>Thiago de Oliveira Lima</h1>
+            <p>Sobre Mim</p>
+            
             <section class="card">
-                ...
+                Sou Thiago, paulistano, e vivo em São Paulo com minha família. Atuo como Analista de Suporte em uma empresa do setor de
+                armazenamento alfandegado. Pai de dois filhos, dedico grande parte do meu tempo livre a eles. Sou apaixonado por viagens
+                e por aprender coisas novas, sempre em busca de novos conhecimentos e experiências.
             </section>
             
             <section class="card">
                 ...
-            </section>
-            
-            <p>
-                Sou estudante de Desenvolvimento de Software e estou aprendendo
-                HTML, CSS e JavaScript na disciplina Fundamentos da Web Dinâmica.
-            </p>
-            
+            </section>       
+        </main>
+    </div>
+        <div class="conteiner2">
+        <aside>
+            <p>Recursos Web Dev</p>
+
             <a href="https://www.linkedin.com/">LinkedIn</a>
             <a href="https://github.com/">GitHub</a>
             <a href="https://www.byupathway.edu/">BYU-Pathway</a>
-        </main>
-        <aside>
-            <p>Conteúdo do Aside</p>
         </aside>
+        </div>
     </div>
     <footer>
         <!-- Primeiro parágrafo -->
         <p>
-            <span id="currentyear"></span>
+            <p id="lastModified">&copy;Thiago Lima | BYU-Pathway | WDD 131 2026</p>
         </p>
         
         <!-- Segundo parágrafo -->
-        <p id="lastModified">&copy;Thiago Lima | BYU-Pathway | WDD 131 2026</p>
+         <p>
+            <p id="ultimaModificacao" </p>
+         </p>
+        
     </footer>
-    <script src="scripts/myscripts.js"></script>
+    <script src="scripts/obterdatas.js"></script>
 </body>
 
 </html>

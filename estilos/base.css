@@ -7,24 +7,39 @@
 
 }
 
+.conteinercentral {
+    display: flex;
+    gap: 10px;
+}
 .conteiner {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
+    flex: 3;
+    border: 1px solid #000
+
+}
+.conteiner2 {
+    flex: 1;
+    border: 1px solid #000
 
 }
 
 main {
-    background-color: #6e6e6f;
-    min-height: 470px;
+    background-color: #fff;
+    min-height: 370px;
 
 }
 
 aside {
-    background-color: #f7f8f8;
-    min-height: 470px;
+    background-color: #fff;
+    min-height: 370px;
 
 }
 
+.nome {
+    text-align: center;
+    font-family: 'Roboto' sans-serif;
+    font-size: 1.5rem;
+    
+}
 
 /* Menu de Navegação */
 * {
@@ -33,12 +48,12 @@ aside {
 }
 
 body {
-    font-family: acme, Arial, sans-serif;
-}
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}    
 
 h1 {
-    text-align: center;
-    background-color: #ffc328;
+    font-weight: 100;
 
 }
 
@@ -79,12 +94,10 @@ nav {
     text-decoration-color: yellow;
 }
 
-
-
 footer {
     background-color: #3d3d3d;
     color: white;
     text-align: center;
     min-height: 50px;
-
+    
 }
