@@ -1,7 +1,9 @@
 
 .conteiner {
-    flex: 3;
-    border: 1px solid #000;
+    border: 3px solid #1D4D72;
+    border-radius: 10px;
+    flex: 3;   
+    
 }
 
 .content-header {
@@ -23,13 +25,14 @@
 
 .conteinercentral {
     display: flex;
-    
-    gap: 10px;
+        
+    gap: 15px;
 }
 
 .conteiner2 {
     flex: 1;
-    border: 1px solid #000
+    border: 3px solid #1D4D72;
+    border-radius: 10px;
 
 }
 
@@ -38,6 +41,7 @@
     display: flex;
     align-items: center;
     gap: 30px;
+    
 }
 
 .texto-sobre {
@@ -47,6 +51,8 @@
 .sobre-mim img {
     width: 250px;
     height: auto;
+    border-radius: 10px;
+    
 }
 
 /* Sobre Bandeira*/
@@ -63,23 +69,24 @@
 .sobre-brandeira img {
     width: 150px;
     height: auto;
+
 }
 
 
 main {
     background-color: #fff;
-    min-height: 370px;
+    min-height: 420px;
 
 }
 
 aside {
     background-color: #fff;
-    min-height: 370px;
+    min-height: 420px;
 
 }
 
 .perfilnome {
-    border: 1px solid #000;
+    /*border: 1px solid #000;*/
     font-family: 'Roboto', sans-serif;
     font-size: 28px;
     font-weight: 500;
@@ -103,10 +110,12 @@ body {
 }    
 
 h1 {
-    font-weight: 400;
+    font-weight: 100;
     background-color: #1D4D72;
     text-align: center;
+    font-family: 'Roboto', sans-serif;
     color: white;
+    font-size: 20px;
 
 }
 
@@ -139,6 +148,7 @@ nav {
     padding: 0.75rem;
     text-decoration: none;
     text-align: center;
+    
 }
 
 .navigation a:hover {
@@ -147,8 +157,19 @@ nav {
     text-decoration-color: #1D4D72;
 }
 
+.conteiner2 aside {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    
+}
+
+.conteiner2 a {
+    padding-left: 20px;
+}
+
 footer {
-    background-color: #3d3d3d;
+    background-color: #1D4D72;
     color: white;
     text-align: center;
     min-height: 50px;
