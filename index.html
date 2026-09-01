@@ -5,7 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>WDD 131 - Fundamentos da Web Dinâmica - Thiago Lima</title>
-    <meta name="description" content="Thiago Lima explora os fundamentos da Web Dinâmica no curso WDD 131, utilizando HTML, CSS e JavaScript para criar páginas interativas e responsivas.">
+    <meta name="description"
+        content="Thiago Lima explora os fundamentos da Web Dinâmica no curso WDD 131, utilizando HTML, CSS e JavaScript para criar páginas interativas e responsivas.">
     <meta name="author" content="Thiago de Oliveira Lima">
     <link rel="stylesheet" href="estilos/base.css">
 
@@ -19,7 +20,7 @@
 <body class="container">
     <header>
         <div class="content-header">
-            <span id="course-title">
+            <span class="titulo">
                 WDD 131: Fundamentos da Web Dinâmica - Thiago O. Lima
             </span>
         </div>
@@ -40,46 +41,69 @@
             </ul>
         </nav>
     </header>
-    <div id="nome">
+    <div class="perfilnome">
         <p>Thiago de Oliveira Lima</p>
     </div>
     <div class="conteinercentral">
         <div class="conteiner">
-        <main>
-            <p>Sobre Mim</p>
-            
-            <section class="card">
-                Sou Thiago, paulistano, e vivo em São Paulo com minha família. Atuo como Analista de Suporte em uma empresa do setor de
-                armazenamento alfandegado. Pai de dois filhos, dedico grande parte do meu tempo livre a eles. Sou apaixonado por viagens
-                e por aprender coisas novas, sempre em busca de novos conhecimentos e experiências.
-            </section>
-            
-            <section class="card">
-                ...
-            </section>       
-        </main>
-    </div>
-        <div class="conteiner2">
-        <aside>
-            <p>Recursos Web Dev</p>
+            <main>
+                <h1>Sobre Mim</h1>
 
-            <a href="https://www.linkedin.com/">LinkedIn</a>
-            <a href="https://github.com/">GitHub</a>
-            <a href="https://www.byupathway.edu/">BYU-Pathway</a>
-        </aside>
+                <section class="sobre-mim">
+                    <div class="texto-sobre">
+                        <p>
+                            Sou Thiago, paulistano, e vivo em São Paulo com minha família. Atuo como Analista de Suporte em uma
+                            empresa do setor de
+                            armazenamento alfandegado. Pai de dois filhos, dedico grande parte do meu tempo livre a eles. Sou
+                            apaixonado por viagens
+                            e por aprender coisas novas, sempre em busca de novos conhecimentos e experiências.
+                        </p>
+                    </div>
+                    <img src="imagens/minha-imagem.jpg" alt="Foto de Thiago">
+                    
+                </section> 
+                
+                    <section class="sobre-brandeira">
+
+                        <img src="imagens/bandeira.jpg" alt="Foto de Thiago">
+
+                        <div class="texto-bandeira"> 
+                            <p>
+                                A bandeira atual foi adotada em 19 de novembro de 1889, logo após a Proclamação da República, substituindo a bandeira do
+                                Império. Ela foi desenhada por Raimundo Teixeira Mendes, com colaboração de Miguel Lemos, e a parte artística ficou a
+                                cargo do pintor Décio Villares.
+                                
+                                As posições das estrelas na bandeira são tecnicamente precisas — cada uma corresponde à posição real de uma estrela ou
+                                constelação no céu, sendo um dos poucos exemplos no mundo de uma bandeira com base em dados astronômicos reais.                                
+                            </p>
+
+                        </div>                        
+                        
+                    </section>             
+                               
+            </main>
+        </div>
+        <div class="conteiner2">
+            <aside>
+                <h1>Recursos Web Dev</h1>
+
+                <a href="https://www.linkedin.com/">LinkedIn</a>
+                <a href="https://github.com/">GitHub</a>
+                <a href="https://www.byupathway.edu/">BYU-Pathway</a>
+            </aside>
         </div>
     </div>
     <footer>
         <!-- Primeiro parágrafo -->
         <p>
-            <p id="lastModified">&copy;Thiago Lima | BYU-Pathway | WDD 131 2026</p>
+        <p id="lastModified">&copy; 2026 🌐 Thiago de Oliveira Lima | BYU-Pathway | WDD 131 2026</p>
         </p>
-        
+
         <!-- Segundo parágrafo -->
-         <p>
-            <p id="ultimaModificacao" </p>
-         </p>
-        
+        <p>
+        <p id="ultimaModificacao" </p>
+        </p>
+
     </footer>
     <script src="scripts/obterdatas.js"></script>
 </body>

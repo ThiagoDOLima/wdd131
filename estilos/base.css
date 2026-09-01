@@ -1,26 +1,70 @@
+
+.conteiner {
+    flex: 3;
+    border: 1px solid #000;
+}
+
 .content-header {
-    background-color: #3d3d3d;
+    background-color: #1D4D72;
     color: white;
     padding: 20px;
-    height: 30px;
-    min-height: 50px;
+    min-height: 10px;
+    text-align: center;
 
+}
+
+ /* Tamanho da Fonte Titulo*/
+.titulo {
+    font-family: 'Roboto', sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    
 }
 
 .conteinercentral {
     display: flex;
+    
     gap: 10px;
 }
-.conteiner {
-    flex: 3;
-    border: 1px solid #000
 
-}
 .conteiner2 {
     flex: 1;
     border: 1px solid #000
 
 }
+
+/* Sobre Mim*/
+.sobre-mim {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.texto-sobre {
+    flex: 1;
+}
+
+.sobre-mim img {
+    width: 250px;
+    height: auto;
+}
+
+/* Sobre Bandeira*/
+.sobre-brandeira {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.texto-bandeira {
+    flex: 1;
+}
+
+.sobre-brandeira img {
+    width: 150px;
+    height: auto;
+}
+
 
 main {
     background-color: #fff;
@@ -34,10 +78,14 @@ aside {
 
 }
 
-.nome {
-    text-align: center;
-    font-family: 'Roboto' sans-serif;
-    font-size: 1.5rem;
+.perfilnome {
+    border: 1px solid #000;
+    font-family: 'Roboto', sans-serif;
+    font-size: 28px;
+    font-weight: 500;
+    padding: 20px;
+    min-height: 10px;
+    color: #000;
     
 }
 
@@ -50,10 +98,15 @@ aside {
 body {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
+    font-size: 20px;
+
 }    
 
 h1 {
-    font-weight: 100;
+    font-weight: 400;
+    background-color: #1D4D72;
+    text-align: center;
+    color: white;
 
 }
 
@@ -91,7 +144,7 @@ nav {
 .navigation a:hover {
     font-weight: 700;
     text-decoration: underline;
-    text-decoration-color: yellow;
+    text-decoration-color: #1D4D72;
 }
 
 footer {
