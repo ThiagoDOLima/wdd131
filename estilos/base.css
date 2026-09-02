@@ -135,7 +135,7 @@ nav {
     display: flex;
     flex-wrap: wrap;
     /* quebrem a linha" quando não houver espaço suficiente. */
-    background-color: #000000;
+    background-color: #070707;
     align-items: center;
 }
 
@@ -146,7 +146,7 @@ nav {
 
 .navigation a {
     display: block;
-    color: #ffffff;
+    color: #1D4D72;
     padding: 0.75rem;
     text-decoration: none;
     text-align: center;
@@ -159,6 +159,7 @@ nav {
     text-decoration: underline;
     text-decoration-color: #1D4D72;
 }
+
 /* Menu do Recursos Web Dev */
 .conteiner2 aside {
     display: flex;
