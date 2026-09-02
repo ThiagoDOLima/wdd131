@@ -70,16 +70,22 @@ aside {
     min-height: 420px;
 
 }
-
+/* Meu nome*/
 .perfilnome {
-    /*border: 1px solid #000;*/
-    font-family: 'Roboto', sans-serif;
-    font-size: 28px;
-    font-weight: 500;
-    padding: 20px;
-    min-height: 10px;
-    color: #000;
+    text-align: center;
+    padding: 25px 10px;
     
+}
+
+.perfilnome p {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    font-style: italic;
+    letter-spacing: 2px;
+    color: #08506d;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 /* Menu de Navegação */
@@ -96,6 +102,16 @@ body {
 }    
 
 h1 {
+    font-weight: 100;
+    background-color: #1D4D72;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: 20px;
+
+}
+
+h2 {
     font-weight: 100;
     background-color: #1D4D72;
     text-align: center;
@@ -135,6 +151,7 @@ nav {
     text-decoration: none;
     text-align: center;
     
+    
 }
 
 .navigation a:hover {
@@ -142,7 +159,7 @@ nav {
     text-decoration: underline;
     text-decoration-color: #1D4D72;
 }
-
+/* Menu do Recursos Web Dev */
 .conteiner2 aside {
     display: flex;
     flex-direction: column;
@@ -151,7 +168,34 @@ nav {
 }
 
 .conteiner2 a {
-    padding-left: 20px;
+    padding-left: 10px;
+    text-decoration: none;     /* Remove o sublinhado */
+    color: #1D4D72;        /* Remove o azul padrão */
+    padding: 12px 14px;
+    
+    background-color: #ffffff;
+    
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    
+    font-weight: bold;
+    
+    transition:
+        transform 0.3s,
+        background-color 0.3s,
+        color 0.3s;
+}
+
+.conteiner2 a:hover {
+    background-color: #08506d;
+    color: white;
+    
+    transform: translateX(4px);
+
+}
+
+.ultimaModificacao {
+    color: #dcf809
 }
 
 footer {
