@@ -37,7 +37,7 @@
 }
 
 /* Sobre Mim*/
-.sobre-mim {
+.card-sobre-mim {
     display: flex;
     align-items: center;
     gap: 30px;
@@ -56,7 +56,7 @@
 }
 
 /* Sobre Bandeira*/
-.sobre-brandeira {
+.card-sobre-brandeira {
     display: flex;
     align-items: center;
     gap: 30px;
