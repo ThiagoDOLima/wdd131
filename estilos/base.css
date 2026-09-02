@@ -8,7 +8,7 @@
 
 .content-header {
     background-color: #1D4D72;
-    color: white;
+    color: #ffffff;
     padding: 20px;
     min-height: 10px;
     text-align: center;
@@ -60,13 +60,13 @@
 
 
 main {
-    background-color: #fff;
+    background-color: #ffffff;
     min-height: 420px;
 
 }
 
 aside {
-    background-color: #fff;
+    background-color: #ffffff;
     min-height: 420px;
 
 }
@@ -106,7 +106,7 @@ h1 {
     background-color: #1D4D72;
     text-align: center;
     font-family: 'Roboto', sans-serif;
-    color: white;
+    color: #ffffff;
     font-size: 20px;
 
 }
@@ -116,7 +116,7 @@ h2 {
     background-color: #1D4D72;
     text-align: center;
     font-family: 'Roboto', sans-serif;
-    color: white;
+    color: #ffffff;
     font-size: 20px;
 
 }
@@ -135,7 +135,7 @@ nav {
     display: flex;
     flex-wrap: wrap;
     /* quebrem a linha" quando não houver espaço suficiente. */
-    background-color: #070707;
+    background-color: #000000;
     align-items: center;
 }
 
@@ -146,7 +146,7 @@ nav {
 
 .navigation a {
     display: block;
-    color: #1D4D72;
+    color: #ffffff;
     padding: 0.75rem;
     text-decoration: none;
     text-align: center;
@@ -159,7 +159,6 @@ nav {
     text-decoration: underline;
     text-decoration-color: #1D4D72;
 }
-
 /* Menu do Recursos Web Dev */
 .conteiner2 aside {
     display: flex;
@@ -189,7 +188,7 @@ nav {
 
 .conteiner2 a:hover {
     background-color: #08506d;
-    color: white;
+    color: #ffffff;
     
     transform: translateX(4px);
 
@@ -201,7 +200,7 @@ nav {
 
 footer {
     background-color: #1D4D72;
-    color: white;
+    color: #ffffff;
     text-align: center;
     min-height: 50px;
     
