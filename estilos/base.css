@@ -24,9 +24,12 @@
 }
 
 .conteinercentral {
-    display: flex;
-        
-    gap: 15px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    
 }
 
 .conteiner2 {
@@ -53,23 +56,6 @@
     height: auto;
     border-radius: 10px;
     
-}
-
-/* Sobre Bandeira*/
-.card-sobre-brandeira {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-}
-
-.texto-bandeira {
-    flex: 1;
-}
-
-.sobre-brandeira img {
-    width: 150px;
-    height: auto;
-
 }
 
 
