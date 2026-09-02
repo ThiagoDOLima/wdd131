@@ -37,7 +37,7 @@
 }
 
 /* Sobre Mim*/
-.card-sobre-mim {
+.card {
     display: flex;
     align-items: center;
     gap: 30px;
@@ -48,7 +48,7 @@
     flex: 1;
 }
 
-.sobre-mim img {
+.card img {
     width: 250px;
     height: auto;
     border-radius: 10px;
