@@ -1,9 +1,8 @@
-const hamButton = document.querySelector('#menu');
-const navigation = document.querySelector('.navigation');
+const menuToggle = document.getElementById('menu');
+const menuLinks = document.getElementById('menuLinks');
 
-hamButton.addEventListener('_______', () => {
-    navigation._______.toggle('_______');
-    hamButton.classList.toggle('open');
+menuToggle.addEventListener('click', () => {
+    menuLinks.classList.toggle('active');
 });
 
 document.getElementById("currentyear").textContent = new Date().getFullYear();

@@ -72,6 +72,25 @@ nav {
     color: #333;
     font-weight: 700;
 }
+/* O botão está vazio */
+#menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#menu span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 2px;
+}
 
 /* Galeria Imagens */
 
