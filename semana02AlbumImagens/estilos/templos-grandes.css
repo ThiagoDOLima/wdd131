@@ -4,4 +4,32 @@
         /* vira menu horizontal */
         justify-content: space-evenly;
     }
+        .menu-links {
+            flex-direction: row;
+            width: auto;
+    }
+        #menu {
+             display: none;
+             /* ocultar botão de hambúrguer */
+    }
+    
+        .navigation {
+             flex-direction: row;
+    }
+    
+        .navigation a {
+             display: block;
+             flex: 1 1 100%;
+    }
+    
+        .enchimento {
+             margin: 1rem auto;
+    }
+        .galeria {
+            grid-template-columns: repeat(3, 1fr);
+            max-width: 900px;
+    
+        }
+       
 }
+
