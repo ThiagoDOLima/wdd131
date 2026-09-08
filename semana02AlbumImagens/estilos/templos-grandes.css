@@ -1,0 +1,7 @@
+@media (min-width: 768px) {
+    .navigation {
+        flex-direction: row;
+        /* vira menu horizontal */
+        justify-content: space-evenly;
+    }
+}

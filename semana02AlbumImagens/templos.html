@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S02 – Tarefa: Álbum de Imagens</title>
+    <meta name="description"
+        content="Thiago Lima explora os fundamentos da Web Dinâmica no curso WDD 131, utilizando HTML, CSS e JavaScript para criar páginas interativas e responsivas.">
+    <meta name="author" content="Thiago de Oliveira Lima">
+
+    <!-- define o estilo base (mobile), sem media queries.-->
+    <link rel="stylesheet" href="estilos/templos.css">
+
+    <!--contém as media queries (min-width: 768px) que sobrescrevem certas regras quando a tela é maior.-->
+    <link rel="stylesheet" href="estilos/templos-grandes.css">
+    
+    <!-- Script JavaScript -->
+    <script src="scripts/templos.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Álbum do Templo</h1>
+
+        <nav>
+            <ul class="navigation">
+                <li><a href="#" title="Página Inicial">Página Inicial</a></li>
+                <li><a href="#" title="Antigo">Antigo</a></li>
+                <li><a href="#" title="Novo">Novo</a></li>
+                <li><a href="#" title="Grande">Grande</a></li>
+                <li><a href="#" title="Pequeno">Pequeno</a></li>
+            </ul>
+        </nav>
+    </header>
+        <h1></h1>
+        <div class="galeria">
+            <figure>
+                <img src="imagens/templo.jpg" alt="Imgans Tempo">
+             <figcaption>Templo da Igreja 1</figcaption>
+            </figure>
+            <figure>
+                <img src="imagens/templo.jpg" alt="Imgans Tempo">
+                <figcaption>Templo da Igreja 2</figcaption>
+            </figure>
+            <figure>
+                <img src="imagens/templo.jpg" alt="Imgans Tempo">
+                <figcaption>Templo da Igreja 3</figcaption>
+            </figure>
+            <figure>
+                <img src="imagens/templo.jpg" alt="Imgans Tempo">
+                <figcaption>Templo da Igreja 4</figcaption>
+            </figure>
+            <figure>
+                <img src="imagens/templo.jpg" alt="Imgans Tempo">
+                <figcaption>Templo da Igreja 5</figcaption>
+            </figure>
+            <figure>
+                <img src="imagens/templo.jpg" alt="Imgans Tempo">
+                <figcaption>Templo da Igreja 6</figcaption>
+            </figure>
+            <figure>
+                <img src="imagens/templo.jpg" alt="Imgans Tempo">
+                <figcaption>Templo da Igreja 7</figcaption>
+            </figure>
+            <figure>
+                <img src="imagens/templo.jpg" alt="Imgans Tempo">
+                <figcaption>Templo da Igreja 8</figcaption>
+            </figure>
+            <figure>
+                <img src="imagens/templo.jpg" alt="Imgans Tempo">
+                <figcaption>Templo da Igreja 9</figcaption>
+            </figure>
+            
+        </div>
+    
+    </main>
+    <footer>
+        <!-- Primeiro parágrafo -->
+        <p>
+            &copy; <span id="currentyear"></span> 🌐 Thiago de Oliveira Lima | BYU-Pathway | WDD 131 2026
+        </p>
+        <!-- Segundo parágrafo -->
+        <p class="ultimaModificacao" id="ultimaModificacao"></p>
+
+    </footer>
+    
+</body>
+</html>
