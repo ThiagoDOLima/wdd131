@@ -80,6 +80,7 @@ nav {
     flex-direction: column;
     width: 100%;
     background-color: #6a0dad;
+    color: #fff
 }
 
 .navigation a {
@@ -91,8 +92,8 @@ nav {
 }
 
 .navigation a:hover {
-    background-color: #bbb;
-    color: #dd0909;
+    background-color: #ffffff;
+    color: #4b0082;
     font-weight: 700;
 }
 
