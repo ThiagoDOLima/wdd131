@@ -9,7 +9,7 @@
             width: auto;
     }
         #menu {
-             display: grid;
+             display: none;
              /* ocultar botão de hambúrguer */
     }
     
