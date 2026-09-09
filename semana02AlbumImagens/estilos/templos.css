@@ -62,6 +62,7 @@ header {
 
     background-color: #6a0dad;
     border-radius: 2px;
+    transition: 0.3s;
 }
 
 
@@ -116,9 +117,7 @@ nav {
     transform: rotate(-45deg) translate(6px, -6px);
 }
 
-#menu span {
-    transition: 0.3s;
-}
+
 
 /* =========================
    GALERIA
