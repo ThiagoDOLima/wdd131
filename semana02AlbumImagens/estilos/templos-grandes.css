@@ -9,7 +9,7 @@
             width: auto;
     }
         #menu {
-             display: none;
+             display: grid;
              /* ocultar botão de hambúrguer */
     }
     
@@ -26,6 +26,7 @@
              margin: 1rem auto;
     }
         .galeria {
+            display: grid;
             grid-template-columns: repeat(3, 1fr);
             max-width: 900px;
     

@@ -1,4 +1,7 @@
-/* Mobile visualização móvel */
+/* =========================
+   CONFIGURAÇÕES GERAIS
+========================= */
+
 * {
     margin: 0;
     padding: 0;
@@ -6,44 +9,87 @@
 }
 
 h1 {
-    text-align: center;
-    font-family: times, serif;
+    font-family: Times, serif;
     font-size: 1.5rem;
-    margin-left: 1rem;
+    margin: 0;
+    white-space: nowrap;
 }
+
 h2 {
     text-align: center;
 }
 
+p {
+    text-align: center;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
 header {
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 0 1rem;
+    padding: 1rem;
+    gap: 20px;
 }
 
-nav {
-    display: flex;
-    width: 100%;
-    margin: 1rem 0;
-}
 
-.navigation {
+/* =========================
+   BOTÃO HAMBÚRGUER
+========================= */
+
+#menu {
     display: flex;
     flex-direction: column;
-    background-color: #6a0dad;
-    color: #fff;
-    list-style: none; /*remove as bolinhas do menu*/
+    justify-content: space-between;
+
+    width: 30px;
+    height: 22px;
+
+    background: none;
+    border: none;
+
+    cursor: pointer;
+}
+
+#menu span {
+    display: block;
     width: 100%;
+    height: 3px;
+
+    background-color: #6a0dad;
+    border-radius: 2px;
+}
+
+
+/* =========================
+   MENU DE NAVEGAÇÃO
+========================= */
+
+.navigation {
+    display: none;
+    flex-direction: column;
+
+    width: 100%;
+
+    background-color: #6a0dad;
+}
+
+.navigation.open {
+    display: flex;
 }
 
 .navigation a {
     display: block;
-    /* visível no mobile, empilhado */
+
     padding: 1rem;
+
     text-align: center;
     text-decoration: none;
+
     color: #fff;
 }
 
@@ -53,53 +99,19 @@ nav {
     font-weight: 700;
 }
 
-.menu-links {
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-    width: 100%;
-}
 
-.menu-links a {
-    display: block;
-    padding: 1rem;
-    text-align: center;
-    text-decoration: none;
-    color: #fff;
-}
-
-.menu-links a:hover {
-    background-color: #bbb;
-    color: #333;
-    font-weight: 700;
-}
-/* O botão está vazio */
-#menu {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 22px;
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
-#menu span {
-    display: block;
-    height: 3px;
-    width: 100%;
-    background-color: #fff;
-    border-radius: 2px;
-}
-
-/* Galeria Imagens */
+/* =========================
+   GALERIA
+========================= */
 
 .galeria {
     display: grid;
     grid-template-columns: 1fr;
+
     gap: 1rem;
-    max-width: 700px;
+
+    max-width: 1000px;
+
     margin: 1rem auto;
     padding: 0 1rem;
 }
@@ -112,24 +124,68 @@ nav {
 .galeria img {
     width: 100%;
     height: auto;
+
     display: block;
+
     border-radius: 4px;
 }
 
 .galeria figcaption {
     margin-top: 0.5rem;
+
     font-size: 0.9rem;
     color: #555;
 }
 
+
+/* =========================
+   RODAPÉ
+========================= */
+
 footer {
     background-color: #6a0dad;
     color: #ffffff;
-    text-align: center;
-    min-height: 50px;
 
+    text-align: center;
+
+    min-height: 50px;
 }
 
 .ultimaModificacao {
-    color: #dcf809
+    color: #dcf809;
+}
+
+
+/* =========================
+   DESKTOP
+========================= */
+
+@media (min-width: 768px) {
+
+    /* Esconde o botão hambúrguer */
+    #menu {
+        display: none;
+    }
+
+    /* Mostra o menu */
+    .navigation {
+        display: flex;
+        flex-direction: row;
+
+        justify-content: space-evenly;
+
+        width: auto;
+
+        flex: 1;
+    }
+
+    .navigation a {
+        flex: 1;
+    }
+
+    /* Galeria com 3 colunas */
+    .galeria {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 900px;
+    }
 }
