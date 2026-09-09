@@ -8,25 +8,25 @@
             flex-direction: row;
             width: auto;
     }
+        /* Esconde o hambúrguer */
         #menu {
-             display: none;
-             /* ocultar botão de hambúrguer */
+            display: none;
+             
     }
-    
+          /* Menu horizontal */
         .navigation {
-             flex-direction: row;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
     }
-    
+         /* Mostra todos os links */
         .navigation a {
              display: block;
-             flex: 1 1 100%;
+             flex: 1;
     }
     
-        .enchimento {
-             margin: 1rem auto;
-    }
-        .galeria {
-            display: grid;
+        /* Galeria com 3 colunas */
+        .galeria {            
             grid-template-columns: repeat(3, 1fr);
             max-width: 900px;
     
