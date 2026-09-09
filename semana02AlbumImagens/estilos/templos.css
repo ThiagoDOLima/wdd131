@@ -95,7 +95,7 @@ header {
 
 .navigation a:hover {
     background-color: #bbb;
-    color: #333;
+    color: #dd0909;
     font-weight: 700;
 }
 
@@ -134,7 +134,7 @@ header {
     margin-top: 0.5rem;
 
     font-size: 0.9rem;
-    color: #555;
+    color: #555555;
 }
 
 
