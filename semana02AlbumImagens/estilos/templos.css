@@ -176,36 +176,3 @@ footer {
 }
 
 
-/* =========================
-   DESKTOP
-========================= */
-
-@media (min-width: 768px) {
-
-    /* Esconde o botão hambúrguer */
-    #menu {
-        display: none;
-    }
-
-    /* Mostra o menu */
-    .navigation {
-        display: flex;
-        flex-direction: row;
-
-        justify-content: space-evenly;
-
-        width: auto;
-
-        flex: 1;
-    }
-
-    .navigation a {
-        flex: 1;
-    }
-
-    /* Galeria com 3 colunas */
-    .galeria {
-        grid-template-columns: repeat(3, 1fr);
-        max-width: 900px;
-    }
-}
