@@ -8,10 +8,21 @@ footer {
     max-width: 760px;
     margin: 0 auto;
 }
-
+/*
 marquee {
     padding: 1rem;
     background-color: #eee;
+}
+*/
+/* Exclua o marquee e substitua-o por uma área fixa <div class="banner">,
+conforme mostrado na figura.*/
+.banner {
+    border: 1px solid rgb(0 0 0 / 0.2);
+    padding: 1rem;
+    background-color: rgb(230 243 254 / 1);
+    font-weight: 700;
+    word-break: break-word;
+    text-align: center;
 }
 
 h1 {
@@ -20,12 +31,19 @@ h1 {
 
 main {
     display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* gap: 1rem;   opcional, mas recomendado para dar espaço entre as colunas */
 }
 
 h2 {
     color: navy;
-    text-align: left;
     /*Corrija a justificação do alinhamento <h2>para que fique alinhado à esquerda em vez de centralizado*/
+    text-align: left;
+    
+    /*O título <h2>dentro deste contêiner <main>*/
+    grid-column: 1 / -1; /* ocupa da primeira à última linha = as duas colunas */
+    
+
 }
 
 article p {
