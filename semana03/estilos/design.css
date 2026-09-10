@@ -32,8 +32,9 @@ article p {
     text-align: justify;
 }
 
+/*6 Corrija os problemas de contraste no div.callout e verifique se ele passa nos níveis AA e AAA*/
 .callout {
-    color: #777;
+    color: #ffffff; 
     background-color: #702963;
     padding: 1rem; /* Corrija os problemas de padding no contêiner div.callout.*/
     /* border: 1px solid #777777;*/
