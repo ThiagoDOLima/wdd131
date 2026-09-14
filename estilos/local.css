@@ -28,6 +28,10 @@ svg {
     --azul-bandeira: #002776;
     --branco-bandeira: #FFFFFF;
 
+    /* Cores de texto/fundo geral */
+    --cor-texto: #222;
+    --cor-fundo: #fff;
+
     /* Espaçamentos */
     --espaco-sm: 8px;
     --espaco-md: 16px;
@@ -37,7 +41,7 @@ svg {
     --fonte-base: system-ui, -apple-system, sans-serif;
 }
 
-/* ===== BASE ===== */
+/* ===== BASE (aplica em qualquer tela) ===== */
 body {
     font-family: var(--fonte-base);
     color: var(--cor-texto);
@@ -57,58 +61,45 @@ a {
     text-decoration: none;
 }
 
-
-
-/* CABEÇALHO (Navbar) */
-
+/* =========================
+   CABEÇALHO (Navbar)
+========================= */
 .logo {
     background-color: var(--verde-bandeira);
-    color: #ffffff;
-    
+    color: var(--branco-bandeira);
     text-align: center;
-    font-size: 32px;
-   
+    font-size: 24px;
+    padding: var(--espaco-sm);
 }
 
-/* Seção HERO Foto Principal */
-
+/* =========================
+   SEÇÃO HERO — Foto Principal
+   Base = MOBILE
+========================= */
 #hero {
     position: relative;
-    /* referência para os boxes absolutos */
+    /* referência para os boxes absolutos a partir do tablet */
 }
 
 #hero img {
     width: 100%;
-    max-height: 600px;
+    max-height: 250px;
     object-fit: cover;
     display: block;
 }
 
-.data-box {
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
+.data-box,
 .weather-box {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-}
-
-/* Dentro da foto principal os valores */
-.linha {
-    display: flex;
-    justify-content: space-between;
-    padding: 4px 0;
-    border-bottom: 1px solid var(--amarelo-bandeira);
+    position: static;
+    width: 100%;
+    margin-top: var(--espaco-sm);
 }
 
 .data-box,
 .weather-box {
     background-color: var(--verde-bandeira);
     color: var(--branco-bandeira);
-    padding: 16px;
+    padding: var(--espaco-md);
     border-radius: 8px;
     border: 3px solid var(--amarelo-bandeira);
 }
@@ -116,6 +107,14 @@ a {
 .data-box h2,
 .weather-box h2 {
     color: var(--amarelo-bandeira);
+}
+
+/* Linhas Label: Value dentro das caixas */
+.linha {
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 0;
+    border-bottom: 1px solid var(--amarelo-bandeira);
 }
 
 .linha dt {
@@ -130,13 +129,10 @@ a {
 /* =========================
    RODAPÉ
 ========================= */
-
 footer {
     background-color: var(--verde-bandeira);
-    color: #ffffff;
-
+    color: var(--branco-bandeira);
     text-align: center;
-
     min-height: 50px;
 }
 
