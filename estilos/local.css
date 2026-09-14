@@ -70,6 +70,63 @@ a {
    
 }
 
+/* Seção HERO Foto Principal */
+
+#hero {
+    position: relative;
+    /* referência para os boxes absolutos */
+}
+
+#hero img {
+    width: 100%;
+    max-height: 600px;
+    object-fit: cover;
+    display: block;
+}
+
+.data-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.weather-box {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+/* Dentro da foto principal os valores */
+.linha {
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 0;
+    border-bottom: 1px solid var(--amarelo-bandeira);
+}
+
+.data-box,
+.weather-box {
+    background-color: var(--verde-bandeira);
+    color: var(--branco-bandeira);
+    padding: 16px;
+    border-radius: 8px;
+    border: 3px solid var(--amarelo-bandeira);
+}
+
+.data-box h2,
+.weather-box h2 {
+    color: var(--amarelo-bandeira);
+}
+
+.linha dt {
+    color: var(--branco-bandeira);
+    font-weight: bold;
+}
+
+.linha dd {
+    color: var(--amarelo-bandeira);
+}
+
 /* =========================
    RODAPÉ
 ========================= */
