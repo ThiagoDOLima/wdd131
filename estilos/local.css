@@ -23,7 +23,7 @@ svg {
 /* ===== VARIÁVEIS GLOBAIS ===== */
 :root {
     /* Cores - Bandeira do Brasil */
-    --verde-bandeira: #009739;
+    --verde-bandeira: #006428;
     --amarelo-bandeira: #FEDD00;
     --azul-bandeira: #002776;
     --branco-bandeira: #FFFFFF;
@@ -94,10 +94,8 @@ a {
 
 .data-box,
 .weather-box {
-    position: static;
-    width: 100%;
-    margin-top: var(--espaco-sm);
-    background-color: var(--verde-bandeira);
+    background-color: var(--verde-contraste);
+    /* trocado */
     color: var(--branco-bandeira);
     padding: var(--espaco-md);
     border-radius: 8px;
