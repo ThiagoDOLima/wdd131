@@ -5,6 +5,9 @@
 
 /* Tablet e acima */
 @media (min-width: 768px) {
+    .weather-box img {
+            display: none;
+    }
 
     #hero {
         position: relative;
@@ -36,6 +39,7 @@
         right: 20px;
     }
 
+    
     .logo {
         font-size: 32px;
     }
