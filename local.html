@@ -34,7 +34,12 @@
         <!-- SEÇÃO HERO (Destaque) -->
         <section id="hero">
     
-            <img src="imagens/paisagem.webp" alt="[Imagem Ilustrativa / Vídeo Demonstrativo]">
+            <img src="imagens/paisagem.webp" 
+            srcset="imagens/paisagem-480.webp 480w,
+                    imagens/paisagem-800.webp 800w,
+                    imagens/paisagem-1200.webp 1200w" 
+                sizes="100vw" 
+                alt="Bandeira do Basil">
     
             <div class="data-box">
                 <h2>Data</h2>
@@ -75,7 +80,7 @@
             </div>
     
             <div class="weather-box">
-                <h2>Clima ⛅</h2>
+                <h2>Clima <img src="imagens/icone-clima.svg" alt="" width="24" height="120"></h2>
                 <dl>
                     <div class="linha">
                         <dt>Temperature:</dt>
