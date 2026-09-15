@@ -8,58 +8,57 @@ document.getElementById("ultimaModificacao").textContent =
     `Última modificação: ${document.lastModified}`;
 
 
-/* =========================================================
-SEÇÃO CLIMA — Sensação térmica
-========================================================= */
-
-// Valores estáticos (nesta etapa do curso).
-// No futuro, virão de uma API de clima em tempo real.
-const temperaturaAtual = 5;        // °C
-const velocidadeVentoAtual = 20;   // km/h
-const unidade = "C";               // "C" para métrico, "F" para imperial
-
-
-/**
- * Calcula o fator de sensação térmica (wind chill).
- * Usa a fórmula correspondente à unidade adotada pelo local:
- * - Métrico (°C, km/h): fórmula do Environment Canada
- * - Imperial (°F, mph): fórmula do National Weather Service (EUA)
- *
- * @param {number} temperatura - temperatura no ar
- * @param {number} velocidadeVento - velocidade do vento
- * @param {string} unidade - "C" (métrico) ou "F" (imperial)
- * @returns {number} sensação térmica, arredondada a 1 casa decimal
- */
-function calcularSensacaoTermica(temperatura, velocidadeVento, unidade) {
-    return unidade === "F"
-        ? Math.round((35.74 + 0.6215 * temperatura - 35.75 * Math.pow(velocidadeVento, 0.16) + 0.4275 * temperatura * Math.pow(velocidadeVento, 0.16)) * 10) / 10
-        : Math.round((13.12 + 0.6215 * temperatura - 11.37 * Math.pow(velocidadeVento, 0.16) + 0.3965 * temperatura * Math.pow(velocidadeVento, 0.16)) * 10) / 10;
+/* ============================================================
+   RODAPÉ - Ano atual e data da última modificação do documento
+   ============================================================ */
+const anoAtualEl = document.getElementById('currentyear');
+if (anoAtualEl) {
+    anoAtualEl.textContent = new Date().getFullYear();
 }
 
+const ultimaModificacaoEl = document.getElementById('lastModified');
+if (ultimaModificacaoEl) {
+    ultimaModificacaoEl.textContent = 'Última atualização: ' + document.lastModified;
+}
+
+/* ============================================================
+   CLIMA - Sensação térmica (Wind Chill)
+   ============================================================ */
+
+// Valores estáticos (nas próximas etapas do curso serão substituídos
+// por dados dinâmicos vindos de uma API de terceiros)
+const temperatura = 5;       // °C
+const velocidadeVento = 20;  // km/h
 
 /**
- * Verifica se as condições mínimas para o cálculo de sensação
- * térmica são atendidas e exibe o resultado (ou "N/A") na tela.
+ * Calcula a sensação térmica (wind chill) com base na temperatura
+ * e na velocidade do vento, usando a fórmula métrica (°C / km/h)
+ * adotada por Environment Canada / Serviço Meteorológico.
  *
- * Condições para o cálculo ser considerado viável:
- *   Métrico:   temperatura <= 10°C   E   vento > 4.8 km/h
- *   Imperial:  temperatura <= 50°F   E   vento > 3 mph
+ * Fórmula:
+ * SensaçãoTérmica = 13.12 + 0.6215*T - 11.37*V^0.16 + 0.3965*T*V^0.16
+ *
+ * @param {number} temp - temperatura em °C
+ * @param {number} vento - velocidade do vento em km/h
+ * @returns {number} sensação térmica em °C
  */
-function exibirSensacaoTermica() {
-    const sensacaoTermicaEl = document.querySelector("#sensacaoTermica");
-    if (!sensacaoTermicaEl) return;
+function calcularSensacaoTermica(temp, vento) {
+    return 13.12 + 0.6215 * temp - 11.37 * Math.pow(vento, 0.16) + 0.3965 * temp * Math.pow(vento, 0.16);
+}
 
-    const limiteTemperatura = unidade === "F" ? 50 : 10;
-    const limiteVento = unidade === "F" ? 3 : 4.8;
+// Elemento da página onde o resultado será exibido
+const sensacaoTermicaEl = document.getElementById('sensacaoTermica');
 
-    const condicoesAtendidas =
-        temperaturaAtual <= limiteTemperatura &&
-        velocidadeVentoAtual > limiteVento;
+// A função só é chamada se as condições de viabilidade forem atendidas:
+// Temperatura <= 10 °C  E  Velocidade do vento > 4.8 km/h
+let resultadoSensacaoTermica;
 
-    if (condicoesAtendidas) {
-        const resultado = calcularSensacaoTermica(temperaturaAtual, velocidadeVentoAtual, unidade);
-        sensacaoTermicaEl.textContent = `${resultado}°${unidade}`;
-    } else {
-        sensacaoTermicaEl.textContent = "N/A";
-    }
+if (temperatura <= 10 && velocidadeVento > 4.8) {
+    resultadoSensacaoTermica = calcularSensacaoTermica(temperatura, velocidadeVento).toFixed(1) + ' °C';
+} else {
+    resultadoSensacaoTermica = 'N/A';
+}
+
+if (sensacaoTermicaEl) {
+    sensacaoTermicaEl.textContent = resultadoSensacaoTermica;
 }
