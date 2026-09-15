@@ -102,6 +102,11 @@ a {
     border: 3px solid var(--amarelo-bandeira);
 }
 
+.weather-box img {
+    width: 24px;
+    height: 120px;
+}
+
 .data-box h2,
 .weather-box h2 {
     color: var(--amarelo-bandeira);

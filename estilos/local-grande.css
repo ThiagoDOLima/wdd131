@@ -5,30 +5,38 @@
 
 /* Tablet e acima */
 @media (min-width: 768px) {
+
+    .hero {
+        position: relative;
+    }
+
     #hero img {
+        width: 100%;
         max-height: 600px;
+        object-fit: cover;
     }
 
     .data-box,
     .weather-box {
         position: absolute;
         width: auto;
+        max-width: 300px;
+        padding: 1rem;
         margin-top: 0;
     }
 
     .data-box {
-        top: 0;
-        left: 0;
+        top: 20px;
+        left: 20px;
     }
 
     .weather-box {
-        bottom: 0;
-        right: 0;
+        bottom: 20px;
+        right: 20px;
     }
 
     .logo {
         font-size: 32px;
     }
 }
-
 
