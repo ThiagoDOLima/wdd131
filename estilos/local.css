@@ -56,6 +56,10 @@ h4 {
     line-height: 1.2;
 }
 
+p {
+    line-height: 1.2;
+}
+
 a {
     color: inherit;
     text-decoration: none;
@@ -93,10 +97,6 @@ a {
     position: static;
     width: 100%;
     margin-top: var(--espaco-sm);
-}
-
-.data-box,
-.weather-box {
     background-color: var(--verde-bandeira);
     color: var(--branco-bandeira);
     padding: var(--espaco-md);
