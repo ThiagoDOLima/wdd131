@@ -102,10 +102,22 @@ a {
     border: 3px solid var(--amarelo-bandeira);
 }
 
-.weather-box img {
-    width: 24px;
-    height: 120px;
+.weather-box p {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
 }
+
+.weather-box p img {
+    width: 35px;
+    height: auto;
+    max-width: 35px;
+    display: block;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
 
 .data-box h2,
 .weather-box h2 {
