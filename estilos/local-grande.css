@@ -5,10 +5,18 @@
 
 /* Tablet e acima */
 @media (min-width: 768px) {
-    .weather-box img {
-            display: none;
+
+/* Esconde o ícone SVG (funciona com img ou svg) */
+    .weather-box p .icone-mobile {
+        display: none !important;
     }
 
+    /* Mostra o ícone HTML */
+    .weather-box p .icone-desktop {
+        display: inline-block;
+        font-size: 28px;
+    }
+    
     #hero {
         position: relative;
     }
@@ -39,9 +47,8 @@
         right: 20px;
     }
 
-    
+
     .logo {
         font-size: 32px;
     }
 }
-

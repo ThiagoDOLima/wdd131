@@ -113,16 +113,28 @@ a {
     width: 35px;
     height: auto;
     max-width: 35px;
-    display: block;
+    
     object-fit: contain;
     flex-shrink: 0;
 }
+/* ===== ÍCONES ===== */
 
+/* Tela pequena: mostra SVG */
+.icone-mobile {
+    display: block;
+}
+
+/* Tela pequena: esconde ícone HTML */
+.icone-desktop {
+    display: none;
+}
 
 .data-box h2,
 .weather-box h2 {
     color: var(--amarelo-bandeira);
 }
+
+
 
 /* Linhas Label: Value dentro das caixas */
 .linha {
