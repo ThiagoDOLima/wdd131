@@ -1,0 +1,36 @@
+@media (min-width: 768px) {
+    .navigation {
+        flex-direction: row;
+        /* vira menu horizontal */
+        justify-content: space-evenly;
+    }
+        .menu-links {
+            flex-direction: row;
+            width: auto;
+    }
+        /* Esconde o hambúrguer */
+        #menu {
+            display: none;
+             
+    }
+          /* Menu horizontal */
+        .navigation {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+    }
+         /* Mostra todos os links */
+        .navigation a {
+             display: block;
+             flex: 1;
+    }
+    
+        /* Galeria com 3 colunas */
+        .galeria {            
+            grid-template-columns: repeat(3, 1fr);
+            max-width: 900px;
+    
+        }
+       
+}
+

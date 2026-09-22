@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Álbum de Imagens do Templos</title>
+    <meta name="description"
+        content="Thiago Lima explora os fundamentos da Web Dinâmica no curso WDD 131, utilizando HTML, CSS e JavaScript para criar páginas interativas e responsivas.">
+    <meta name="author" content="Thiago de Oliveira Lima">
+
+    <!-- define o estilo base (mobile), sem media queries.-->
+    <link rel="stylesheet" href="estilos/templos-filtrados.css">
+
+    <!--contém as media queries (min-width: 768px) que sobrescrevem certas regras quando a tela é maior.-->
+    <link rel="stylesheet" href="estilos/templos-grande-filtrados.css">
+
+    <!-- Script JavaScript -->
+    <script src="scripts/templos-filtrados.js" defer></script>
+
+    <!-- Fontes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>Álbum do Templo</h1>
+
+        <!-- Menu Hambúrguer -->
+        <button id="menu" aria-label="Abrir menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="navigation" id="menuLinks">
+            <a href="#" id="all">Início</a>
+            <a href="#" id="old">Antigo</a>
+            <a href="#" id="new">Novo</a>
+            <a href="#" id="large">Grande</a>
+            <a href="#" id="small">Pequenos</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Página Inicial</h2>
+
+        <div class="galeria">
+          
+
+        </div>
+
+    </main>
+    <footer>
+        <!-- Primeiro parágrafo -->
+        <p>
+            &copy; <span id="currentyear"></span> 🌐 Thiago de Oliveira Lima | BYU-Pathway | WDD 131 2026
+        </p>
+        <!-- Segundo parágrafo -->
+        <p class="ultimaModificacao" id="ultimaModificacao"></p>
+
+    </footer>
+
+</body>
+
+</html>
