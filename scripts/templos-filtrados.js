@@ -83,6 +83,25 @@ const templos = [
             "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
     },
     // Adicione mais objetos de templos aqui...
+    {
+        nomeDoTemplo: "Templo de Recife, Basil",
+        localizacao: "Brasil, Recife",
+        consagracao: "1995, 1 de janeiro",
+        area: 37200,
+        urlDaImagem:
+            "https://churchofjesuschristtemples.org/assets/img/temples/recife-brazil-temple/recife-brazil-temple-36778.jpg"
+    },
+
+    {
+        nomeDoTemplo: "Templo de São Paulo, Basil",
+        localizacao: "Brasil, São Paulo",
+        consagracao: "1978, 30 Outubro",
+        area: 37200,
+        urlDaImagem:
+            "https://churchofjesuschristtemples.org/assets/img/temples/sao-paulo-brazil-temple/sao-paulo-brazil-temple-9671-thumb.jpg"
+    },
+
+
 ];
 
 createTempleCard(templos); 
