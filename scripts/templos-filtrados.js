@@ -21,12 +21,12 @@ document.getElementById('ultimaModificacao').textContent =
 //
 //document.querySelector('#old').addEventListener('click', () => {
 //    toggleActive(document.querySelector('#old'));
-//    createTempleCard(templos.filter(templo => new Date(templo.dedication) < new Date('1950-01-01')));
+//    createTempleCard(templos.filter(templo => new Date(templo.consagracao) < new Date('1950-01-01')));
 //});
 //
 //document.querySelector('#new').addEventListener('click', () => {
 //    toggleActive(document.querySelector('#new'));
-//    createTempleCard(templos.filter(templo => new Date(templo.dedication) >= new Date('1950-01-01')));
+//    createTempleCard(templos.filter(templo => new Date(templo.consagracao) >= new Date('1950-01-01')));
 //});
 //
 //document.querySelector('#large').addEventListener('click', () => {
@@ -46,7 +46,7 @@ const templos = [
     {
         nomeDoTemplo: "Aba Nigeria",
         localizacao: "Aba, Nigéria",
-        consagracao: "2005-08-07",
+        consagracao: "2005-05-22",
         area: 11500,
         urlDaImagem:
             "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/aba-nigeria/400x250/aba-nigeria-temple-lds-273999-wallpaper.jpg"
@@ -62,7 +62,7 @@ const templos = [
     {
         nomeDoTemplo: "Payson Utah",
         localizacao: "Payson, Utah, Estados Unidos",
-        consagracao: "2015-06-07",
+        consagracao: "2015-03-15", 
         area: 96630,
         urlDaImagem:
             "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/payson-utah/400x225/payson-utah-temple-exterior-1416671-wallpaper.jpg"
@@ -70,7 +70,7 @@ const templos = [
     {
         nomeDoTemplo: "Yigo Guam",
         localizacao: "Yigo, Guam",
-        consagracao: "2020-05-02",
+        consagracao: "2020-05-17",
         area: 6861,
         urlDaImagem:
             "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/yigo-guam/400x250/yigo_guam_temple_2.jpg"
@@ -78,7 +78,7 @@ const templos = [
     {
         nomeDoTemplo: "Washington D.C.",
         localizacao: "Kensington, Maryland, Estados Unidos",
-        consagracao: "1974-19-11",
+        consagracao: "1974-11-19",
         area: 156558,
         urlDaImagem:
             "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/washington-dc/400x250/washington_dc_temple-exterior-2.jpeg"
@@ -121,20 +121,42 @@ const templos = [
 
 ];
 
+function toggleActive(element) {
+    document.querySelectorAll('.navigation a').forEach(link => {
+        link.classList.remove('active');
+    });
+
+    element.classList.add('active');
+}
+
 function setFiler(seletor, filterFunction) {
     const element = document.querySelector(seletor);
 
-    element.addEventListener('click', () => {
+    element.addEventListener('click', (event) => {
+        event.preventDefault();
+
         toggleActive(element);
+
         createTempleCard(templos.filter(filterFunction));
     });
 }
 
-setFiler('#all', () => templos);
-setFiler('#old', templo => new Date(templo.dedication) < cutoffDate);
-setFiler('#new', templo => new Date(templo.dedication) > cutoffDate);
+document.querySelector('#all').addEventListener('click', (event) => {
+    event.preventDefault();
+
+    toggleActive(document.querySelector('#all'));
+
+    createTempleCard(templos);
+});
+
+setFiler('#old', templo => new Date(templo.consagracao) < cutoffDate);
+
+setFiler('#new', templo => new Date(templo.consagracao) >= cutoffDate);
+
 setFiler('#large', templo => templo.area > largeArea);
+
 setFiler('#small', templo => templo.area < largeArea);
+
 
 
 
@@ -147,13 +169,13 @@ function createTempleCard(templos) {
         let card = document.createElement("section");
         let name = document.createElement("h3");
         let location = document.createElement("p");
-        let dedication = document.createElement("p");
+        let consagracao = document.createElement("p");
         let area = document.createElement("p");
         let img = document.createElement("img");
 
         name.textContent = temple.nomeDoTemplo; 
         location.innerHTML = `<span class="label">Localização:</span> ${temple.localizacao}`; 
-        dedication.innerHTML = `<span class="label">Dedicado:</span> ${temple.consagracao}`;
+        consagracao.innerHTML = `<span class="label">Dedicado:</span> ${temple.consagracao}`;
         area.innerHTML = `<span class="label">Tamanho:</span> ${temple.area} pés²`; 
         img.setAttribute("src", temple.urlDaImagem); 
         img.setAttribute("alt", `Templo ${temple.nomeDoTemplo}`); 
@@ -161,7 +183,7 @@ function createTempleCard(templos) {
 
         card.appendChild(name);
         card.appendChild(location);
-        card.appendChild(dedication);
+        card.appendChild(consagracao);
         card.appendChild(area);
         card.appendChild(img);
 
