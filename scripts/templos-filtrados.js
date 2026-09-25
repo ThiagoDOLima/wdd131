@@ -6,33 +6,34 @@ menuToggle.addEventListener('click', () => {
     menuToggle.classList.toggle('open');
 });
 
-//document.getElementById('currentyear').textContent = new Date().getFullYear();
+document.getElementById('currentyear').textContent = new Date().getFullYear();
 
-//document.getElementById('ultimaModificacao').textContent =
-//    `Última modificação: ${document.lastModified}`;
+document.getElementById('ultimaModificacao').textContent =
+    `Última modificação: ${document.lastModified}`;
 
 
+// Uma Forma de Criar
 
 //document.querySelector('#all').addEventListener('click', () => {
 //    toggleActive(document.querySelector('#all'));
 //    createTempleCard(templos);
 //});
-
+//
 //document.querySelector('#old').addEventListener('click', () => {
-    toggleActive(document.querySelector('#old'));
-    createTempleCard(templos.filter(templo => new Date(templo.dedication) < new Date('1950-01-01')));
+//    toggleActive(document.querySelector('#old'));
+//    createTempleCard(templos.filter(templo => new Date(templo.dedication) < new Date('1950-01-01')));
 //});
-
+//
 //document.querySelector('#new').addEventListener('click', () => {
 //    toggleActive(document.querySelector('#new'));
 //    createTempleCard(templos.filter(templo => new Date(templo.dedication) >= new Date('1950-01-01')));
 //});
-
+//
 //document.querySelector('#large').addEventListener('click', () => {
 //    toggleActive(document.querySelector('#large'));
 //    createTempleCard(templos.filter(templo => templo.area > 50000));
 //});
-
+//
 //document.querySelector('#small').addEventListener('click', () => {
 //    toggleActive(document.querySelector('#small'));
 //    createTempleCard(templos.filter(templo => templo.area < 50000));
@@ -40,21 +41,6 @@ menuToggle.addEventListener('click', () => {
 
 const cutoffDate = new Date('1950-01-01');
 const largeArea = 50000;
-
-function setFiler(seletor, filterFunction) {
-    const element = document.querySelector(seletor);
-
-    element.addEventListener('click', () => {
-        toggleActive(element);
-        createTempleCard(templos.filter(filterFunction));
-    });
-}
-
-setFiler('#all', () => templos);
-setFiler('#old', templo => new Date(templo.dedication) < cutoffDate);
-setFiler('#new', templo => new Date(templo.dedication) > cutoffDate);
-setFiler('#large', templo => templo.area > largeArea);
-setFiler('#small', templo => templo.area < largeArea);
 
 const templos = [
     {
@@ -134,6 +120,23 @@ const templos = [
 
 
 ];
+
+function setFiler(seletor, filterFunction) {
+    const element = document.querySelector(seletor);
+
+    element.addEventListener('click', () => {
+        toggleActive(element);
+        createTempleCard(templos.filter(filterFunction));
+    });
+}
+
+setFiler('#all', () => templos);
+setFiler('#old', templo => new Date(templo.dedication) < cutoffDate);
+setFiler('#new', templo => new Date(templo.dedication) > cutoffDate);
+setFiler('#large', templo => templo.area > largeArea);
+setFiler('#small', templo => templo.area < largeArea);
+
+
 
 createTempleCard(templos); 
 
