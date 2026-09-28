@@ -118,6 +118,24 @@ const templos = [
             "https://churchofjesuschristtemples.org/assets/img/temples/sao-paulo-brazil-temple/sao-paulo-brazil-temple-9671-thumb.jpg"
     },
 
+    {
+        nomeDoTemplo: "Templo de Maceio, Basil",
+        localizacao: "Brasil, São Paulo",
+        consagracao: "2026-10-10",
+        area: 37200,
+        urlDaImagem:
+            "https://churchofjesuschristtemples.org/assets/img/temples/maceio-brazil-temple/maceio-brazil-temple-34462-thumb.jpg"
+    },
+
+    {
+        nomeDoTemplo: "Templo de Filipinas, Filipinas",
+        localizacao: "Filipinas, Filipinas",
+        consagracao: "2026-08-08",
+        area: 37200,
+        urlDaImagem:
+            "https://churchofjesuschristtemples.org/assets/img/temples/maceio-brazil-temple/maceio-brazil-temple-34462-thumb.jpg"
+    },
+
 
 ];
 
