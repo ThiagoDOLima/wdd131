@@ -133,7 +133,7 @@ const templos = [
         consagracao: "2026-08-08",
         area: 37200,
         urlDaImagem:
-            "https://churchofjesuschristtemples.org/assets/img/temples/maceio-brazil-temple/maceio-brazil-temple-34462-thumb.jpg"
+            "https://churchofjesuschristtemples.org/assets/img/temples/naga-philippines-temple/naga-philippines-temple-73358-thumb.jpg"
     },
 
 
