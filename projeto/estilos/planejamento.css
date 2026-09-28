@@ -1,3 +1,7 @@
+/* MOBILE FIRST */
+
+/* Estilos para celular */
+
 /* =========================
            VARIÁVEIS DE CORES
         ========================= */
@@ -43,6 +47,71 @@ header h1 {
 
 header p {
     font-size: 1.1rem;
+}
+/* =========================
+   BOTÃO HAMBÚRGUER
+========================= */
+
+#menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 30px;
+    height: 22px;
+
+    background: none;
+    border: none;
+
+    cursor: pointer;
+}
+
+#menu span {
+    display: block;
+    width: 100%;
+    height: 3px;
+
+    background-color: #FFF8E7;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+
+/* =========================
+   MENU DE NAVEGAÇÃO
+========================= */
+
+nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #5C4033;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #5C4033;
+    color: #FFF8E7;
+}
+
+.navigation a {
+    display: none;
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+    color: #FFF8E7;
+}
+
+.navigation a:hover {
+    background-color: #C68E50;
+    color: #5C4033;
+    font-weight: 700;
+}
+
+.navigation.active a {
+    display: block;
 }
 
 /* =========================
@@ -237,38 +306,19 @@ tr:nth-child(even) {
 }
 
 /* =========================
-           RODAPÉ
-        ========================= */
+   RODAPÉ
+========================= */
+
 footer {
-    background-color: var(--marrom);
-    color: var(--branco);
+    background-color: #5C4033;
+    color: #FFF8E7;
+
     text-align: center;
-    padding: 1.5rem;
-    margin-top: 2rem;
+
+    min-height: 50px;
 }
 
-/* =========================
-           RESPONSIVIDADE
-        ========================= */
-@media (max-width: 600px) {
-
-    header h1 {
-        font-size: 2rem;
-    }
-
-    section {
-        padding: 1.2rem;
-    }
-
-    .cores {
-        grid-template-columns: 1fr;
-    }
-
-    .wireframes {
-        grid-template-columns: 1fr;
-    }
-
-    .box-cards {
-        grid-template-columns: 1fr;
-    }
+.ultimaModificacao {
+    color: #C68E50;
 }
+

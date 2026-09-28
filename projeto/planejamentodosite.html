@@ -4,19 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Álbum de Imagens do Templos</title>
+    <title>Bolos da Vovó</title>
     <meta name="description"
-        content="Thiago Lima explora os fundamentos da Web Dinâmica no curso WDD 131, utilizando HTML, CSS e JavaScript para criar páginas interativas e responsivas.">
+        content="Bolos da Vovó: bolos caseiros feitos com carinho e dedicação. Conheça nossos sabores, confira opções para festas e faça sua encomenda.">
     <meta name="author" content="Thiago de Oliveira Lima">
 
     <!-- define o estilo base (mobile), sem media queries.-->
-    <link rel="stylesheet" href="estilos/pl">
+    <link rel="stylesheet" href="estilos/planejamento.css">
 
     <!--contém as media queries (min-width: 768px) que sobrescrevem certas regras quando a tela é maior.-->
-    <link rel="stylesheet" href="estilos/templos-grande-filtrados.css">
+    <link rel="stylesheet" href="estilos/planejamentodesktop.css">
 
     <!-- Script JavaScript -->
-    <script src="scripts/templos-filtrados.js" defer></script>
+    <script src="scripts/planejamentodo.js" defer></script>
 
     <!-- Fontes-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,7 +27,7 @@
 
 <body>
     <header>
-        <h1>Álbum do Templo</h1>
+        <h1>Bolos da Vovó</h1>
 
         <!-- Menu Hambúrguer -->
         <button id="menu" aria-label="Abrir menu">
@@ -38,10 +38,10 @@
 
         <nav class="navigation" id="menuLinks">
             <a href="#" id="all">Página Inicial</a>
-            <a href="#" id="old">Antigo</a>
-            <a href="#" id="new">Novo</a>
-            <a href="#" id="large">Grande</a>
-            <a href="#" id="small">Pequenos</a>
+            <a href="#" id="old">Nossos Bolos</a>
+            <a href="#" id="new">Bolos para Festas</a>
+            <a href="#" id="large">Encomendas</a>
+            
         </nav>
     </header>
 
@@ -57,10 +57,11 @@
     <footer>
         <!-- Primeiro parágrafo -->
         <p>
-            &copy; <span id="currentyear"></span> 🌐 Thiago de Oliveira Lima | BYU-Pathway | WDD 131 2026
+            &copy; <span id="currentyear"></span> 🎂 Thiago de Oliveira Lima | BYU-Pathway | WDD 131 2026
         </p>
         <!-- Segundo parágrafo -->
         <p class="ultimaModificacao" id="ultimaModificacao"></p>
+
 
     </footer>
 
