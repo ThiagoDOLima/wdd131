@@ -4,25 +4,45 @@
         /* vira menu horizontal */
         justify-content: space-evenly;
     }
-        .menu-links {
-            flex-direction: row;
-            width: auto;
+    .menu-links {
+        flex-direction: row;
+        width: auto;
+    }
+    .header-container {
+        flex-wrap: nowrap;
+        /* tudo em uma linha só */
+        padding: 10px 40px;
     }
         /* Esconde o hambúrguer */
-        #menu {
-            display: none;
+    #menu {
+        display: none;
              
     }
-          /* Menu horizontal */
-        .navigation {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-evenly;
+        /* Menu horizontal */
+    .navigation {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        
     }
          /* Mostra todos os links */
-        .navigation a {
-             display: block;
-             flex: 1;
+    .navigation a {
+        display: block;
+        flex: 1;
+    }
+        /* RODAPÉ PARA TELAS GRANDES */
+    .footer-container {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+        text-align: left;
+    }
+    
+    .footer-coluna {
+        text-align: left;
+    }
+    
+    .redes-sociais {
+        justify-content: flex-start;
     }
     
  }

@@ -24,46 +24,120 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
 </head>
-
+<!-- CABEÇALHO -->
 <body>
     <header>
-        <h1>Bolos da Vovó </h1>
-        <img src="projeto/imagens/logobolodavovo.jpeg" alt="Foto de Perfil">
+        <div class="header-container">
+            <!--<h1>Bolos da Vovó </h1> -->
+                <img src="imagens/logo.jpg" alt="Bolos da Vovó">
 
-        <!-- Menu Hambúrguer -->
-        <button id="menu" aria-label="Abrir menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-
-        <nav class="navigation" id="menuLinks">
-            <a href="#" id="all">Página Inicial</a>
-            <a href="#" id="old">Nossos Bolos</a>
-            <a href="#" id="new">Bolos para Festas</a>
-            <a href="#" id="large">Encomendas</a>
+            <!-- Botão do menu para celular -->
+            <button id="menu" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <!-- Navegação -->
+            <nav class="navigation" id="menuLinks">
+                <a href="#" id="all">Página Inicial</a>
+                <a href="#" id="old">Nossos Bolos</a>
+                <a href="#" id="new">Bolos para Festas</a>
+                <a href="#" id="large">Encomendas</a>
             
-        </nav>
-    </header>
+             </nav>
 
-    <main>
-        <h2>Inicio</h2>
-
-        <div class="galeria">
-
-
+            <!-- Botão de encomenda -->
+                <a href="encomendas.html" class="botao-encomenda">
+                    Encomende Agora
+                </a>
         </div>
+    </header>
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main>
 
+        <!-- BANNER PRINCIPAL -->
+        <section class="hero">
+        
+            <div class="hero-conteudo">
+        
+                <h1>O sabor de casa em cada pedaço!</h1>
+        
+                <p>
+                    Bolos caseiros preparados com carinho
+                    para deixar seus momentos ainda mais especiais.
+                </p>
+        
+                <a href="bolos.html" class="botao-principal">
+                    Conheça nossos bolos
+                </a>
+        
+            </div>
+        
     </main>
     <footer>
-        <!-- Primeiro parágrafo -->
-        <p>
-            &copy; <span id="currentyear"></span> 🎂 Thiago de Oliveira Lima | BYU-Pathway | WDD 131 2026
-        </p>
-        <!-- Segundo parágrafo -->
-        <p class="ultimaModificacao" id="ultimaModificacao"></p>
-
-
+        <div class="footer-container">
+        
+            <!-- Menu -->
+            <div class="footer-coluna">
+        
+                <h3>Menu</h3>
+        
+                <a href="bolos.html">Nossos Bolos</a>
+                <a href="festas.html">Bolos para Festas</a>
+                <a href="encomendas.html">Encomendas</a>
+        
+            </div>
+            <!-- Suporte -->
+            <div class="footer-coluna">
+            
+                <h3>Atendimento</h3>
+            
+                <a href="encomendas.html">Faça sua encomenda</a>
+                <a href="encomendas.html">Dúvidas</a>
+            
+            </div>
+            <!-- Contato -->
+            <div class="footer-coluna">
+            
+                <h3>Entre em contato</h3>
+            
+                <p>📍 São Paulo - SP</p>
+                <p>📞 (11) 99999-9999</p>
+            
+            </div>
+            <!-- Redes sociais -->
+            <div class="footer-coluna">
+            
+                <h3>Conecte-se conosco</h3>
+            
+                <div class="redes-sociais">
+            
+                    <a href="#" aria-label="Facebook">
+                        Facebook
+                    </a>
+            
+                    <a href="#" aria-label="Instagram">
+                        Instagram
+                    </a>
+            
+                </div>
+            
+            </div>
+            
+            </div>
+            <!-- Direitos autorais -->
+            <div class="footer-final">
+            
+                <p>
+                    &copy; <span id="currentyear"></span>
+                    Bolos da Vovó | Thiago de Oliveira Lima |
+                    BYU-Pathway | WDD 131
+                </p>
+            
+                <p class="ultimaModificacao" id="ultimaModificacao"></p>
+            
+        </div>
+       
     </footer>
 
 </body>

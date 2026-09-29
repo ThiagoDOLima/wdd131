@@ -32,54 +32,55 @@ body {
 /* =========================
            CABEÇALHO
         ========================= */
-header {
-    background-color: var(--marrom);
-    color: var(--branco);
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem;
+
+        
+/* ===== MOBILE (base) ===== */
+.header-container {
     display: flex;
-    gap: 20px;
+    flex-wrap: wrap;
+    /* permite o menu cair pra baixo quando abrir */
+    align-items: center;
+    /* alinha tudo no centro vertical */
+    justify-content: space-between;
+    gap: 10px;
+    padding: 10px 15px;
 }
 
-header h1 {
-    font-family: "Playfair Display", serif;
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-    text-align: left;
+.header-container img {
+    height: 50px;
+    width: auto;
 }
 
-header p {
-    font-size: 1.1rem;
-}
-/* =========================
-   BOTÃO HAMBÚRGUER
-========================= */
-
+/* botão hambúrguer */
 #menu {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-
-    width: 30px;
-    height: 22px;
-
+    gap: 5px;
     background: none;
     border: none;
-
     cursor: pointer;
+    order: 2;    /* fica no fim da linha */
 }
 
 #menu span {
     display: block;
-    width: 100%;
+    width: 25px;
     height: 3px;
-
-    background-color: #FFF8E7;
-    border-radius: 2px;
-    transition: 0.3s;
+    background: #333;
 }
 
+/* botão encomende */
+.botao-encomenda {
+    order: 1;
+    /* fica entre o logo e o hambúrguer */
+    padding: 8px 14px;
+    background: #5C4033;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
 
 /* =========================
    MENU DE NAVEGAÇÃO
@@ -309,21 +310,79 @@ tr:nth-child(even) {
 .box-cards .box {
     margin-bottom: 0;
 }
-
 /* =========================
    RODAPÉ
 ========================= */
 
 footer {
-    background-color: #5C4033;
-    color: #FFF8E7;
+    background-color: var(--marrom);
+    color: var(--creme);
+    padding: 2rem 1rem 1rem;
+}
 
+/* Organização das colunas */
+.footer-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Cada coluna */
+.footer-coluna {
     text-align: center;
+}
 
-    min-height: 50px;
+/* Títulos */
+.footer-coluna h3 {
+    color: var(--caramelo);
+    font-family: "Playfair Display", serif;
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+}
+
+/* Links */
+.footer-coluna a {
+    display: block;
+    color: var(--creme);
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s;
+}
+
+/* Efeito ao passar o mouse */
+.footer-coluna a:hover {
+    color: var(--caramelo);
+    text-decoration: underline;
+}
+
+/* Informações de contato */
+.footer-coluna p {
+    margin-bottom: 0.5rem;
+}
+
+/* Redes sociais */
+.redes-sociais {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* Direitos autorais */
+.footer-final {
+    max-width: 1200px;
+    margin: 2rem auto 0;
+    padding-top: 1rem;
+    border-top: 1px solid var(--caramelo);
+    text-align: center;
+    font-size: 0.85rem;
+}
+
+.footer-final p {
+    margin-bottom: 0.5rem;
 }
 
 .ultimaModificacao {
-    color: #C68E50;
+    color: var(--caramelo);
 }
-
