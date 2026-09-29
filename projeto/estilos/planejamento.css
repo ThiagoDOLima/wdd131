@@ -81,6 +81,95 @@ body {
     font-size: 0.9rem;
     white-space: nowrap;
 }
+/* =========================
+   BANNER PRINCIPAL
+========================= */
+
+.hero {
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 1rem;
+    /*background-color: #E8E8E8;*/
+    position: relative;
+    background-image: url("../imagens/hero.webp");
+    background-size: cover;
+    background-position: center;
+}
+/* camada escura para o texto ficar legível */ 
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.hero-conteudo {
+    position: relative;                 /* fica acima da camada escura */
+    z-index: 1;
+    max-width: 600px;
+    color: #fff;
+}
+.hero-conteudo h1 {
+    font-size: 1.8rem;
+    
+}
+.hero-conteudo p {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.hero h1 {
+    font-family: "Pacifico", cursive;
+    color: var(--creme);
+    font-size: 2.5rem;
+    margin-bottom: 10rem;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    padding: 50px;
+}
+
+.botao-principal {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #5C4033;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+/* pontinhos */
+.hero-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 25px;
+}
+
+.hero-dots span {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.hero-dots span.ativo {
+    background: #fff;
+}
+/* onda */
+.hero-onda {
+    position: absolute;
+    bottom: -30px;    /* evita linha fina entre hero e próxima seção */
+    left: 0;
+    width: 100%;
+    height: 60px;
+    z-index: 1;
+}
 
 /* =========================
    MENU DE NAVEGAÇÃO
@@ -90,7 +179,7 @@ nav {
     display: flex;
     flex-direction: column;
     width: 100%;
-    background-color: #5C4033;
+    background-color: #5c3333;
 }
 
 .navigation {
@@ -190,6 +279,8 @@ li {
     color: var(--caramelo);
     font-style: italic;
 }
+/* BANNER */
+
 
 /* =========================
            TABELAS
@@ -309,6 +400,65 @@ tr:nth-child(even) {
 
 .box-cards .box {
     margin-bottom: 0;
+}
+/* Seção de produtos em destaque */
+.produtos-destaque {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.produtos-destaque h2 {
+    margin-bottom: 25px;
+    font-size: 1.5rem;
+}
+
+/* Container dos produtos e das setas */
+.produtos-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Lista de produtos */
+.produtos-lista {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 15px;
+    width: 100%;
+    max-width: 1000px;
+}
+
+/* Cada produto */
+.produto {
+    flex: 1;
+    min-width: 0;
+    text-align: center;
+}
+
+/* Imagens dos bolos */
+.produto img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Descrição dos produtos */
+.produto p {
+    font-size: 0.85rem;
+    margin-top: 10px;
+}
+
+/* Botões de navegação */
+.seta {
+    border: none;
+    background-color: white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    font-size: 1rem;
 }
 /* =========================
    RODAPÉ

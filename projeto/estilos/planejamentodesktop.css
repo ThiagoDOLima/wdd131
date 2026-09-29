@@ -18,6 +18,27 @@
         display: none;
              
     }
+    .hero {
+        min-height: 450px;
+    }
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    .hero-onda {
+        height: 120px;
+    }
+    /* */
+    .produtos-lista {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+     .produto img {
+        height: 150px;
+    }
+    .produtos-container {
+        gap: 5px;
+    }
         /* Menu horizontal */
     .navigation {
         display: flex;
