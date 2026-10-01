@@ -4,10 +4,7 @@
         /* vira menu horizontal */
         justify-content: space-evenly;
     }
-    .menu-links {
-        flex-direction: row;
-        width: auto;
-    }
+    
     .header-container {
         flex-wrap: nowrap;
         /* tudo em uma linha só */
@@ -17,6 +14,9 @@
     #menu {
         display: none;
              
+    }
+    .wireframes {
+        grid-template-columns: 1fr 2fr;
     }
     .hero {
         min-height: 450px;

@@ -1,0 +1,59 @@
+
+/* =========================
+   TELAS MAIORES
+========================= */
+
+@media screen and (min-width: 768px) {
+
+    .header-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        flex-wrap: nowrap;
+        padding: 1rem 2rem;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    .navigation {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: auto;
+    }
+
+    .navigation a {
+        padding: 1rem 0.7rem;
+    }
+
+    main {
+        padding: 0 2rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    section {
+        padding: 2rem;
+    }
+
+    .cores {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .wireframes {
+        grid-template-columns: 1fr 2fr;
+        align-items: start;
+    }
+
+    .box-cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+

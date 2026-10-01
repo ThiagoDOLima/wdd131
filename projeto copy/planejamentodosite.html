@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Documento de planejamento do site Bolos da Vovó.">
+
+    <meta name="author" content="Thiago de Oliveira Lima">
+
+    <title>Planejamento do Site | Bolos da Vovó</title>
+
+    <link rel="stylesheet" href="estilos/site-plan.css">
+    <link rel="stylesheet" href="estilos/site-plan-desktop.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Pacifico&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <script src="scripts/site-plan.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-container">
+
+            <a href="index.html" class="logo-link">
+                <img src="imagens/logo.jpg" alt="Logotipo Bolos da Vovó">
+            </a>
+
+            <button id="menu" aria-label="Abrir menu" aria-expanded="false" aria-controls="menuLinks">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="navigation" id="menuLinks">
+                <a href="#nome">Nome</a>
+                <a href="#finalidade">Finalidade</a>
+                <a href="#cenarios">Cenários</a>
+                <a href="#cores">Cores</a>
+                <a href="#tipografia">Tipografia</a>
+                <a href="#wireframes">Wireframes</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <main>
+
+        <h1>Documento de Planejamento do Site</h1>
+
+        <p class="subtitulo">Bolos da Vovó — Sabores que lembram casa</p>
+
+        <!-- NOME DO SITE -->
+        <section id="nome">
+
+            <h2>1. Nome do Site</h2>
+
+            <div class="logo">
+                <span class="logo-name">Bolos da Vovó</span>
+                <p class="logo-slogan">O sabor de casa em cada pedaço!</p>
+            </div>
+
+            <p>
+                O nome Bolos da Vovó foi escolhido para transmitir
+                carinho, tradição e aconchego, remetendo aos sabores
+                dos bolos caseiros preparados em família.
+            </p>
+
+        </section>
+
+        <!-- FINALIDADE -->
+        <section id="finalidade">
+
+            <h2>2. Finalidade do Site</h2>
+
+            <p>
+                O site Bolos da Vovó tem como finalidade apresentar
+                os bolos caseiros oferecidos, divulgar os sabores
+                disponíveis, apresentar opções para festas e
+                facilitar o contato dos clientes para a realização
+                de encomendas.
+            </p>
+
+            <p>
+                O site também disponibilizará informações sobre
+                produtos, atendimento e canais de contato,
+                permitindo que os clientes conheçam os bolos
+                antes de fazer seus pedidos.
+            </p>
+
+        </section>
+
+        <!-- CENÁRIOS -->
+        <section id="cenarios">
+
+            <h2>3. Cenários</h2>
+
+            <h3>Cenário 1</h3>
+
+            <p>
+                Como um cliente pode consultar os sabores de bolos
+                disponíveis antes de fazer uma encomenda?
+            </p>
+
+            <p>
+                O visitante poderá acessar a página Nossos Bolos,
+                visualizar os sabores disponíveis e consultar
+                as informações de cada produto.
+            </p>
+
+            <h3>Cenário 2</h3>
+
+            <p>
+                Como uma pessoa que está organizando uma festa
+                pode conhecer as opções de bolos e solicitar
+                um orçamento?
+            </p>
+
+            <p>
+                O visitante poderá acessar a página Bolos para
+                Festas, conhecer as opções disponíveis e utilizar
+                a página de encomendas para entrar em contato.
+            </p>
+
+        </section>
+
+        <!-- CORES -->
+        <section id="cores">
+
+            <h2>4. Esquema de Cores</h2>
+
+            <p>
+                A paleta de cores foi escolhida para transmitir
+                aconchego, simplicidade e a sensação de produtos
+                caseiros.
+            </p>
+
+            <div class="cores">
+
+                <div class="cor">
+                    <div class="amostra creme"></div>
+                    <h3>Creme</h3>
+                    <p>#FFF8E7</p>
+                    <p>Fundo principal da página.</p>
+                </div>
+
+                <div class="cor">
+                    <div class="amostra marrom"></div>
+                    <h3>Marrom</h3>
+                    <p>#5C4033</p>
+                    <p>Cabeçalho, rodapé e títulos.</p>
+                </div>
+
+                <div class="cor">
+                    <div class="amostra caramelo"></div>
+                    <h3>Caramelo</h3>
+                    <p>#C68E50</p>
+                    <p>Botões, destaques e bordas.</p>
+                </div>
+
+                <div class="cor">
+                    <div class="amostra branco"></div>
+                    <h3>Branco</h3>
+                    <p>#FFFFFF</p>
+                    <p>Cartões e áreas de conteúdo.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- TIPOGRAFIA -->
+        <section id="tipografia">
+
+            <h2>5. Tipografia</h2>
+
+            <h3>Playfair Display</h3>
+
+            <p class="exemplo-playfair">
+                Bolos da Vovó
+            </p>
+
+            <p>
+                Utilizada nos títulos das seções e em elementos
+                que precisam transmitir tradição e elegância.
+            </p>
+
+            <h3>Lato</h3>
+
+            <p class="exemplo-lato">
+                Bolos caseiros preparados com carinho.
+            </p>
+
+            <p>
+                Utilizada nos parágrafos, nas descrições dos
+                produtos e nas informações gerais do site.
+            </p>
+
+            <h3>Pacifico</h3>
+
+            <p class="exemplo-pacifico">
+                O sabor de casa em cada pedaço!
+            </p>
+
+            <p>
+                Utilizada no título principal do banner,
+                para transmitir uma identidade acolhedora.
+            </p>
+
+        </section>
+
+        <!-- WIREFRAMES -->
+        <section id="wireframes">
+
+            <h2>6. Wireframes da Página Inicial</h2>
+
+            <p>
+                Os wireframes representam a organização dos
+                principais elementos da página inicial em
+                dispositivos móveis e computadores.
+            </p>
+
+            <div class="wireframes">
+
+                <!-- MOBILE -->
+                <div class="wireframe">
+
+                    <h3>Visualização Mobile</h3>
+
+                    <div class="box">Logotipo e menu</div>
+
+                    <div class="box box-grande">
+                        Banner principal
+                    </div>
+
+                    <div class="box">
+                        Botão Conheça nossos bolos
+                    </div>
+
+                    <div class="box">
+                        Título: Nossos Bolos em Destaque
+                    </div>
+
+                    <div class="box">
+                        Imagem do bolo 1
+                    </div>
+
+                    <div class="box">
+                        Imagem do bolo 2
+                    </div>
+
+                    <div class="box">
+                        Imagem do bolo 3
+                    </div>
+
+                    <div class="box">
+                        Rodapé
+                    </div>
+
+                </div>
+
+                <!-- DESKTOP -->
+                <div class="wireframe">
+
+                    <h3>Visualização Desktop</h3>
+
+                    <div class="box">
+                        Logotipo | Menu | Encomende Agora
+                    </div>
+
+                    <div class="box box-grande">
+                        Banner principal
+                    </div>
+
+                    <div class="box">
+                        Botão Conheça nossos bolos
+                    </div>
+
+                    <div class="box">
+                        Nossos Bolos em Destaque
+                    </div>
+
+                    <div class="box-cards">
+                        <div class="box">Bolo 1</div>
+                        <div class="box">Bolo 2</div>
+                        <div class="box">Bolo 3</div>
+                    </div>
+
+                    <div class="box">
+                        Rodapé com quatro colunas
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <p>
+            &copy; <span id="currentyear"></span>
+            Bolos da Vovó | Thiago de Oliveira Lima
+        </p>
+
+        <p id="ultimaModificacao"></p>
+
+    </footer>
+
+</body>
+
+</html>
+```

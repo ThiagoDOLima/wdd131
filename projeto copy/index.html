@@ -5,6 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bolos da Vovó</title>
+    <!--**Nome do site: Bolos da Vovó**
+
+    O nome Bolos da Vovó foi escolhido para transmitir a sensação de carinho, 
+    tradição e aconchego associada aos bolos caseiros. 
+    A proposta é valorizar receitas que remetem aos sabores da família e 
+    proporcionar aos clientes uma experiência acolhedora.
+-->
     <meta name="description"
         content="Bolos da Vovó: bolos caseiros feitos com carinho e dedicação. Conheça nossos sabores, confira opções para festas e faça sua encomenda.">
     <meta name="author" content="Thiago de Oliveira Lima">
@@ -13,7 +20,7 @@
     <link rel="stylesheet" href="estilos/planejamento.css">
 
     <!--contém as media queries (min-width: 768px) que sobrescrevem certas regras quando a tela é maior.-->
-    <link rel="stylesheet" href="estilos/planejamentodesktop.css">
+    <link rel="stylesheet" href="estilos/planejamento-desktop.css">
 
     <!-- Script JavaScript -->
     <script src="scripts/planejamentodo.js" defer></script>
@@ -32,17 +39,17 @@
                 <img src="imagens/logo.jpg" alt="Bolos da Vovó">
 
             <!-- Botão do menu para celular -->
-            <button id="menu" aria-label="Abrir menu">
+            <button id="menu" aria-label="Abrir menu" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
             <!-- Navegação -->
             <nav class="navigation" id="menuLinks">
-                <a href="#" id="all">Página Inicial</a>
-                <a href="#" id="old">Nossos Bolos</a>
-                <a href="#" id="new">Bolos para Festas</a>
-                <a href="#" id="large">Encomendas</a>
+                <a href="index.html" id="all">Página Inicial</a>
+                <a href="bolos.html" id="old">Nossos Bolos</a>
+                <a href="festas.html" id="new">Bolos para Festas</a>
+                <a href="encomendas.html" id="large">Encomendas</a>
             
              </nav>
 
@@ -126,8 +133,7 @@
         </section>
     </main>
     <footer>
-        <div class="footer-container">
-        
+        <div class="footer-container">        
             <!-- Menu -->
             <div class="footer-coluna">
         
@@ -169,28 +175,24 @@
             
                     <a href="#" aria-label="Instagram">
                         Instagram
-                    </a>
-            
+                    </a>            
                 </div>
             
             </div>
-            
-            </div>
-            <!-- Direitos autorais -->
-            <div class="footer-final">
-            
-                <p>
-                    &copy; <span id="currentyear"></span>
-                    Bolos da Vovó | Thiago de Oliveira Lima |
-                    BYU-Pathway | WDD 131
-                </p>
-            
-                <p class="ultimaModificacao" id="ultimaModificacao"></p>
-            
         </div>
-       
-    </footer>
+            <!-- Direitos autorais -->
+        <div class="footer-final">
 
+            <p>
+                &copy; <span id="currentyear"></span>
+                Bolos da Vovó | Thiago de Oliveira Lima |
+                BYU-Pathway | WDD 131
+            </p>
+            
+            <p class="ultimaModificacao" id="ultimaModificacao"></p>
+        </div>
+               
+    </footer>
 </body>
 
 </html>
