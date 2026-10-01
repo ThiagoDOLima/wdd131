@@ -7,13 +7,13 @@
     <meta name="description" content="Preencha">
 
     <!-- FOLHAS DE ESTILO -->
-    <link href="css/formulario-pequeno.css" rel="stylesheet">
+    <link href="css/formulario-normalize.css" rel="stylesheet">
     <!-- celular padrão -->
-    <link href="css/pequeno.css" rel="stylesheet">
+    <link href="css/formulario-pequeno.css" rel="stylesheet">
     <!-- melhoria para tablet -->
-    <link href="css/medio.css" rel="stylesheet">
+    <link href="css/formulario-medio.css" rel="stylesheet">
     <!-- melhoria para desktop -->
-    <link href="css/grande.css" rel="stylesheet">
+    <link href="css/formulario-grande.css" rel="stylesheet">
 
     <!-- Script JavaScript -->
     <script src="js/formulario.js" defer></script>
@@ -22,13 +22,75 @@
 <body>
     <!-- CABEÇALHO AQUI -->
     <header>
-        <h1>Proposta de Curso</h1>
-        <h2>Avaliação do Produto</h2>
+        <h1>Formulário de Proposta de Curso</h1>
     </header>
-
+<!-- Passo 2: HTML -->
     <main>
+        
+    <form method="GET" action="avaliacao.html" class="fw1">
+        <fieldset>            
+            <label>Nome do Produto
+                <select name="tema">
+                    <option value=""> Selecione</option>
+                    <option value="cenoura">Bolo de Cenoura</option>
+                    <option value="fuba">Bolo de Fubá</option>
+                    <option value="formigueiro">Bolo Formigueiro</option>
+                    <option value="Laranja">Bolo de Laranja</option>
+                    <option value="milho">Bolo de Milho</option>
+                    <option value="ninho">Bolo Leite Ninho</option>
+                    <option value="floresta">Bolo Floresta Negra</option>
+                    <option value="brigadeiro">Bolo de Brigadeiro</option>
+                    
+                </select>
+                                              
+                <!-- Classificação geral -->
+                
+                <legend>Classificação Geral</legend>
 
+                                 
+                <label>
+                <span class="rotulo">★</span>
+                <input type="radio" name="classificacao" value="1" required>
+                </label>
+                <label>
+                 <span class="rotulo">★★</span>
+                 <input type="radio" name="classificacao" value="2">
+                </label>
+                
+                <label>
+                <span class="rotulo">★★★</span>
+                <input type="radio" name="classificacao" value="3">
+                </label>
+                
+                <label>
+                <span class="rotulo">★★★★</span>
+                <input type="radio" name="classificacao" value="4">
+                </label>
+                 <label>
+                <span class="rotulo">★★★★★</span>
+                <input type="radio" name="classificacao" value="5">
+                </label>
+                                                
+                <label>Data de Instalação<input type="date" name="data"></label>
 
+                <div>O que os clientes mais valorizam em um bolo:
+                    (Marque todos que se aplicam)</div>
+                
+                    <label><input type="checkbox" name="equilibrio" value="sim">Equilíbrio no açúcar</label>
+                    <label><input type="checkbox" name="tamanho" value="sim">Tamanho fracionado</label>
+                    <label><input type="checkbox" name="sabor" value="sim">Sabores dos Bolos</label>
+                    <label><input type="checkbox" name="tamanho" value="sim">Tamanho do Bolo</label>
+
+            </label>
+            <!-- Avaliação escrita -->
+            <div class="campo">
+                <label for="avaliacao">
+                 Avaliação Escrita <span class="opcional">(Optional)</span>
+                </label>
+                <textarea id="avaliacao" name="avaliacao" rows="5"></textarea>
+            </div>
+                
+        </fieldset>
 
     </main>
 
