@@ -39,8 +39,11 @@ document.getElementById('ultimaModificacao').textContent =
 //    createTempleCard(templos.filter(templo => templo.area < 50000));
 //});
 
-const cutoffDate = new Date('1950-01-01');
-const largeArea = 50000;
+const cutoffOld = new Date('1900-01-01');
+const cutoffNew = new Date('2000-12-31');
+
+const largeArea = 90000;
+const smallArea = 10000;
 
 const templos = [
     {
@@ -167,13 +170,21 @@ document.querySelector('#all').addEventListener('click', (event) => {
     createTempleCard(templos);
 });
 
-setFiler('#old', templo => new Date(templo.consagracao) < cutoffDate);
+setFiler('#old', templo =>
+    new Date(templo.consagracao) < cutoffOld
+);
 
-setFiler('#new', templo => new Date(templo.consagracao) >= cutoffDate);
+setFiler('#new', templo =>
+    new Date(templo.consagracao) > cutoffNew
+);
 
-setFiler('#large', templo => templo.area > largeArea);
+setFiler('#large', templo =>
+    templo.area > largeArea
+);
 
-setFiler('#small', templo => templo.area < largeArea);
+setFiler('#small', templo =>
+    templo.area < smallArea
+);
 
 
 
