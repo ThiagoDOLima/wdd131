@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -8,7 +9,8 @@
 
     <title>Avaliação de Produto</title>
 
-    <meta name="description" content="Avalie nossos bolos e compartilhe sua experiência com nossos produtos.">
+    <meta name="description"
+        content="Avalie nossos bolos e compartilhe sua experiência com nossos produtos.">
 
     <meta name="author" content="Thiago de Oliveira Lima">
 
@@ -98,37 +100,59 @@
 
                 <p>Como você avalia este produto?</p>
 
+                <div class="classificacao">
 
-<div class="classificacao">
+                    <input type="radio"
+                        id="classificacao-1"
+                        name="classificacao"
+                        value="1"
+                        required>
 
-    <label>
-        <span>★</span>
-        <input type="radio" id="classificacao-1" name="classificacao" value="1" required>
-    </label>
-
-    <label>
-        <span>★★</span>
-        <input type="radio" id="classificacao-2" name="classificacao" value="2">
-    </label>
-
-    <label>
-        <span>★★★</span>
-        <input type="radio" id="classificacao-3" name="classificacao" value="3">
-    </label>
-
-    <label>
-        <span>★★★★</span>
-        <input type="radio" id="classificacao-4" name="classificacao" value="4">
-    </label>
-
-    <label>
-        <span>★★★★★</span>
-        <input type="radio" id="classificacao-5" name="classificacao" value="5">
-    </label>
-
-</div>
+                    <label for="classificacao-1">
+                        ★
+                    </label>
 
 
+                    <input type="radio"
+                        id="classificacao-2"
+                        name="classificacao"
+                        value="2">
+
+                    <label for="classificacao-2">
+                        ★★
+                    </label>
+
+
+                    <input type="radio"
+                        id="classificacao-3"
+                        name="classificacao"
+                        value="3">
+
+                    <label for="classificacao-3">
+                        ★★★
+                    </label>
+
+
+                    <input type="radio"
+                        id="classificacao-4"
+                        name="classificacao"
+                        value="4">
+
+                    <label for="classificacao-4">
+                        ★★★★
+                    </label>
+
+
+                    <input type="radio"
+                        id="classificacao-5"
+                        name="classificacao"
+                        value="5">
+
+                    <label for="classificacao-5">
+                        ★★★★★
+                    </label>
+
+                </div>
 
             </fieldset>
 
@@ -142,33 +166,63 @@
                     Marque todas as opções que se aplicam:
                 </p>
 
-                <label>
-                    <input type="checkbox" name="caracteristica" value="acucar">
+
+                <input type="checkbox"
+                    id="acucar"
+                    name="caracteristica"
+                    value="acucar">
+
+                <label for="acucar">
                     Equilíbrio no açúcar
                 </label>
 
-                <label>
-                    <input type="checkbox" name="caracteristica" value="tamanho">
+
+                <input type="checkbox"
+                    id="tamanho"
+                    name="caracteristica"
+                    value="tamanho">
+
+                <label for="tamanho">
                     Tamanho do bolo
                 </label>
 
-                <label>
-                    <input type="checkbox" name="caracteristica" value="sabor">
+
+                <input type="checkbox"
+                    id="sabor"
+                    name="caracteristica"
+                    value="sabor">
+
+                <label for="sabor">
                     Sabor
                 </label>
 
-                <label>
-                    <input type="checkbox" name="caracteristica" value="variedade">
+
+                <input type="checkbox"
+                    id="variedade"
+                    name="caracteristica"
+                    value="variedade">
+
+                <label for="variedade">
                     Variedade de sabores
                 </label>
 
-                <label>
-                    <input type="checkbox" name="caracteristica" value="preco">
+
+                <input type="checkbox"
+                    id="preco"
+                    name="caracteristica"
+                    value="preco">
+
+                <label for="preco">
                     Preço
                 </label>
 
-                <label>
-                    <input type="checkbox" name="caracteristica" value="qualidade">
+
+                <input type="checkbox"
+                    id="qualidade"
+                    name="caracteristica"
+                    value="qualidade">
+
+                <label for="qualidade">
                     Qualidade
                 </label>
 
@@ -185,7 +239,10 @@
                     <span class="opcional">(Opcional)</span>
                 </label>
 
-                <textarea id="avaliacao" name="avaliacao" rows="5"
+                <textarea
+                    id="avaliacao"
+                    name="avaliacao"
+                    rows="5"
                     placeholder="Conte o que você achou do produto..."></textarea>
 
             </fieldset>
@@ -201,13 +258,19 @@
                     <span class="opcional">(Opcional)</span>
                 </label>
 
-                <input type="text" id="nome" name="nome" autocomplete="name">
+                <input
+                    type="text"
+                    id="nome"
+                    name="nome"
+                    autocomplete="name">
 
             </fieldset>
 
 
             <!-- BOTÃO -->
-            <input type="submit" value="Publicar Avaliação">
+            <input
+                type="submit"
+                value="Publicar Avaliação">
 
         </form>
 
@@ -224,7 +287,9 @@
             WDD 131 2026
         </p>
 
-        <p class="ultimaModificacao" id="ultimaModificacao">
+        <p
+            class="ultimaModificacao"
+            id="ultimaModificacao">
         </p>
 
     </footer>
