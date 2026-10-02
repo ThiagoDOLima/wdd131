@@ -1,108 +1,231 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário de Avaliação de Produto</title>
-    <meta name="description" content="Preencha">
 
-    <!-- FOLHAS DE ESTILO -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Avaliação de Produto</title>
+
+    <meta name="description" content="Avalie nossos bolos e compartilhe sua experiência com nossos produtos.">
+
+    <meta name="author" content="Thiago de Oliveira Lima">
+
+    <!-- CSS -->
     <link href="formularios/css/formulario-normalize.css" rel="stylesheet">
-    <!-- celular padrão -->
     <link href="formularios/css/formulario-pequeno.css" rel="stylesheet">
-    <!-- melhoria para tablet -->
     <link href="formularios/css/formulario-medio.css" rel="stylesheet">
-    <!-- melhoria para desktop -->
     <link href="formularios/css/formulario-grande.css" rel="stylesheet">
 
-    <!-- Script JavaScript -->
+    <!-- JavaScript -->
     <script src="formularios/js/formulario.js" defer></script>
-
 </head>
+
 <body>
-    <!-- CABEÇALHO AQUI -->
+
     <header>
-        <h1>Formulário de Proposta de Curso</h1>
+        <h1>Avalie nosso produto</h1>
+        <p>Conte para nós como foi sua experiência.</p>
     </header>
-<!-- Passo 2: HTML -->
+
     <main>
-        
-    <form method="GET" action="avaliacao.html" class="fw1">
-        <fieldset>            
-            <label>Nome do Produto
-                <select name="tema">
-                    <option value=""> Selecione</option>
-                    <option value="cenoura">Bolo de Cenoura</option>
-                    <option value="fuba">Bolo de Fubá</option>
-                    <option value="formigueiro">Bolo Formigueiro</option>
-                    <option value="Laranja">Bolo de Laranja</option>
-                    <option value="milho">Bolo de Milho</option>
-                    <option value="ninho">Bolo Leite Ninho</option>
-                    <option value="floresta">Bolo Floresta Negra</option>
-                    <option value="brigadeiro">Bolo de Brigadeiro</option>
-                    
+
+        <form method="GET" action="avaliacao.html" class="fw1">
+
+            <!-- PRODUTO -->
+            <fieldset>
+
+                <legend>Produto</legend>
+
+                <label for="produto">
+                    Nome do Produto
+                </label>
+
+                <select id="produto" name="produto" required>
+
+                    <option value="" disabled selected>
+                        Selecione um produto
+                    </option>
+
+                    <option value="cenoura">
+                        Bolo de Cenoura
+                    </option>
+
+                    <option value="fuba">
+                        Bolo de Fubá
+                    </option>
+
+                    <option value="formigueiro">
+                        Bolo Formigueiro
+                    </option>
+
+                    <option value="laranja">
+                        Bolo de Laranja
+                    </option>
+
+                    <option value="milho">
+                        Bolo de Milho
+                    </option>
+
+                    <option value="ninho">
+                        Bolo de Leite Ninho
+                    </option>
+
+                    <option value="floresta">
+                        Bolo Floresta Negra
+                    </option>
+
+                    <option value="brigadeiro">
+                        Bolo de Brigadeiro
+                    </option>
+
                 </select>
-                                              
-                <!-- Classificação geral -->
-                
+
+                <label for="data">
+                    Data da compra
+                </label>
+
+                <input type="date" id="data" name="data" required>
+
+            </fieldset>
+
+
+            <!-- CLASSIFICAÇÃO -->
+            <fieldset>
+
                 <legend>Classificação Geral</legend>
 
-                                 
-                <label>
-                <span class="rotulo">★</span>
-                <input type="radio" name="classificacao" value="1" required>
-                </label>
-                <label>
-                 <span class="rotulo">★★</span>
-                 <input type="radio" name="classificacao" value="2">
-                </label>
-                
-                <label>
-                <span class="rotulo">★★★</span>
-                <input type="radio" name="classificacao" value="3">
-                </label>
-                
-                <label>
-                <span class="rotulo">★★★★</span>
-                <input type="radio" name="classificacao" value="4">
-                </label>
-                 <label>
-                <span class="rotulo">★★★★★</span>
-                <input type="radio" name="classificacao" value="5">
-                </label>
-                                                
-                <label>Data de Instalação<input type="date" name="data"></label>
+                <p>Como você avalia este produto?</p>
 
-                <div>O que os clientes mais valorizam em um bolo:
-                    (Marque todos que se aplicam)</div>
-                
-                    <label><input type="checkbox" name="equilibrio" value="sim">Equilíbrio no açúcar</label>
-                    <label><input type="checkbox" name="tamanho" value="sim">Tamanho fracionado</label>
-                    <label><input type="checkbox" name="sabor" value="sim">Sabores dos Bolos</label>
-                    <label><input type="checkbox" name="tamanho" value="sim">Tamanho do Bolo</label>
+                <div class="classificacao">
 
-            </label>
-            <!-- Avaliação escrita -->
-            <div class="campo">
+                    <label>
+                        <span>★</span>
+                        <input type="radio" name="classificacao" value="1" required>
+                    </label>
+
+                    <label>
+                        <span>★★</span>
+                        <input type="radio" name="classificacao" value="2">
+                    </label>
+
+                    <label>
+                        <span>★★★</span>
+                        <input type="radio" name="classificacao" value="3">
+                    </label>
+
+                    <label>
+                        <span>★★★★</span>
+                        <input type="radio" name="classificacao" value="4">
+                    </label>
+
+                    <label>
+                        <span>★★★★★</span>
+                        <input type="radio" name="classificacao" value="5">
+                    </label>
+
+                </div>
+
+            </fieldset>
+
+
+            <!-- CARACTERÍSTICAS -->
+            <fieldset>
+
+                <legend>O que você mais valoriza?</legend>
+
+                <p>
+                    Marque todas as opções que se aplicam:
+                </p>
+
+                <label>
+                    <input type="checkbox" name="caracteristica" value="acucar">
+                    Equilíbrio no açúcar
+                </label>
+
+                <label>
+                    <input type="checkbox" name="caracteristica" value="tamanho">
+                    Tamanho do bolo
+                </label>
+
+                <label>
+                    <input type="checkbox" name="caracteristica" value="sabor">
+                    Sabor
+                </label>
+
+                <label>
+                    <input type="checkbox" name="caracteristica" value="variedade">
+                    Variedade de sabores
+                </label>
+
+                <label>
+                    <input type="checkbox" name="caracteristica" value="preco">
+                    Preço
+                </label>
+
+                <label>
+                    <input type="checkbox" name="caracteristica" value="qualidade">
+                    Qualidade
+                </label>
+
+            </fieldset>
+
+
+            <!-- COMENTÁRIO -->
+            <fieldset>
+
+                <legend>Conte-nos sua experiência</legend>
+
                 <label for="avaliacao">
-                 Avaliação Escrita <span class="opcional">(Optional)</span>
+                    Sua avaliação
+                    <span class="opcional">(Opcional)</span>
                 </label>
-                <textarea id="avaliacao" name="avaliacao" rows="5"></textarea>
-            </div>
-                
-        </fieldset>
+
+                <textarea id="avaliacao" name="avaliacao" rows="5"
+                    placeholder="Conte o que você achou do produto..."></textarea>
+
+            </fieldset>
+
+
+            <!-- IDENTIFICAÇÃO -->
+            <fieldset>
+
+                <legend>Sobre você</legend>
+
+                <label for="nome">
+                    Seu nome
+                    <span class="opcional">(Opcional)</span>
+                </label>
+
+                <input type="text" id="nome" name="nome" autocomplete="name">
+
+            </fieldset>
+
+
+            <!-- BOTÃO -->
+            <input type="submit" value="Publicar Avaliação">
+
+        </form>
 
     </main>
 
+
     <footer>
-        <!-- Primeiro parágrafo -->
+
         <p>
-            &copy; <span id="currentyear"></span> 🌐 Thiago de Oliveira Lima | BYU-Pathway | WDD 131 2026
+            &copy;
+            <span id="currentyear"></span>
+            🌐 Thiago de Oliveira Lima |
+            BYU-Pathway |
+            WDD 131 2026
         </p>
-        <!-- Segundo parágrafo -->
-        <p class="ultimaModificacao" id="ultimaModificacao"></p>
+
+        <p class="ultimaModificacao" id="ultimaModificacao">
+        </p>
 
     </footer>
-    
+
 </body>
+
 </html>
