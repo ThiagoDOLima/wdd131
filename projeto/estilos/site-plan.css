@@ -1,8 +1,4 @@
-```css
-/* =========================
-   VARIÁVEIS DE CORES
-========================= */
-
+/* ========================= VARIÁVEIS DE CORES ========================= */
 :root {
     --creme: #FFF8E7;
     --marrom: #5C4033;
@@ -11,20 +7,14 @@
     --texto: #333333;
 }
 
-/* =========================
-   RESET
-========================= */
-
+/* ========================= RESET ========================= */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-/* =========================
-   ESTILO GERAL
-========================= */
-
+/* ========================= ESTILO GERAL ========================= */
 body {
     font-family: "Lato", sans-serif;
     background-color: var(--creme);
@@ -33,7 +23,7 @@ body {
 }
 
 main {
-    max-width: 1000px;
+    max-width: 800px;
     margin: 2rem auto;
     padding: 0 1rem;
 }
@@ -51,31 +41,12 @@ h1 {
     margin: 2rem 0 0.5rem;
 }
 
-h2 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    border-bottom: 3px solid var(--caramelo);
-    padding-bottom: 0.5rem;
-}
-
-h3 {
-    margin: 1rem 0 0.5rem;
-}
-
-p {
-    margin-bottom: 1rem;
-}
-
-.subtitulo {
+main>p {
     text-align: center;
-    color: var(--caramelo);
-    font-size: 1.1rem;
+    margin-bottom: 2rem;
 }
 
-/* =========================
-   CABEÇALHO
-========================= */
-
+/* ========================= CABEÇALHO ========================= */
 header {
     background-color: var(--marrom);
 }
@@ -84,7 +55,7 @@ header {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     gap: 1rem;
     padding: 1rem;
 }
@@ -94,196 +65,134 @@ header {
     width: auto;
 }
 
-/* =========================
-   MENU MOBILE
-========================= */
-
-#menu {
+nav {
     display: flex;
-    flex-direction: column;
-    gap: 5px;
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
-#menu span {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background-color: var(--creme);
-}
-
-.navigation {
-    display: none;
     flex-direction: column;
     width: 100%;
-    background-color: var(--marrom);
 }
 
-.navigation.active {
-    display: flex;
-}
-
-.navigation a {
+nav a {
     display: block;
-    padding: 1rem;
+    padding: 0.75rem;
     color: var(--creme);
     text-align: center;
     text-decoration: none;
 }
 
-.navigation a:hover {
+nav a:hover {
     background-color: var(--caramelo);
     color: var(--marrom);
 }
 
-/* =========================
-   SEÇÕES
-========================= */
-
-section {
+/* ========================= FORMULÁRIO ========================= */
+form {
     background-color: var(--branco);
-    margin-bottom: 2rem;
     padding: 1.5rem;
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
-/* =========================
-   LOGOTIPO
-========================= */
-
-.logo {
-    text-align: center;
-    margin: 1.5rem 0;
+/* ========================= FIELDSET ========================= */
+fieldset {
+    margin-bottom: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
 }
 
-.logo-name {
-    display: block;
+legend {
+    color: var(--marrom);
     font-family: "Playfair Display", serif;
-    font-size: 2rem;
     font-weight: 700;
-    color: var(--marrom);
+    padding: 0 0.5rem;
 }
 
-.logo-slogan {
-    color: var(--caramelo);
-    font-style: italic;
+/* ========================= LABELS ========================= */
+label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-weight: 700;
 }
 
-/* =========================
-   PALETA DE CORES
-========================= */
-
-.cores {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-    margin-top: 1rem;
-}
-
-.cor {
-    text-align: center;
-    border: 1px solid #ddd;
-    padding: 1rem;
-    border-radius: 8px;
-}
-
-.amostra {
-    height: 70px;
+/* ========================= SELECT ========================= */
+select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #aaa;
     border-radius: 5px;
-    border: 1px solid #ddd;
-    margin-bottom: 0.5rem;
-}
-
-.creme {
-    background-color: var(--creme);
-}
-
-.marrom {
-    background-color: var(--marrom);
-}
-
-.caramelo {
-    background-color: var(--caramelo);
-}
-
-.branco {
     background-color: var(--branco);
-}
-
-/* =========================
-   TIPOGRAFIA
-========================= */
-
-.exemplo-playfair {
-    font-family: "Playfair Display", serif;
-    font-size: 2rem;
-    color: var(--marrom);
-}
-
-.exemplo-lato {
     font-family: "Lato", sans-serif;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
-.exemplo-pacifico {
-    font-family: "Pacifico", cursive;
-    font-size: 1.8rem;
-    color: var(--caramelo);
-}
-
-/* =========================
-   WIREFRAMES
-========================= */
-
-.wireframes {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-}
-
-.wireframe {
-    border: 3px solid var(--marrom);
-    background-color: #f5f5f5;
-    padding: 1rem;
-    border-radius: 8px;
-}
-
-.wireframe h3 {
-    text-align: center;
-}
-
-.box {
-    border: 2px dashed var(--caramelo);
-    padding: 1rem;
-    margin-bottom: 0.7rem;
-    text-align: center;
+/* ========================= INPUT DATE ========================= */
+input[type="date"] {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #aaa;
+    border-radius: 5px;
     background-color: var(--branco);
+    font-family: "Lato", sans-serif;
+    font-size: 1rem;
 }
 
-.box-grande {
-    min-height: 120px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* ========================= RADIO E CHECKBOX ========================= */
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 0.5rem;
+    accent-color: var(--caramelo);
 }
 
-.box-cards {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 0.5rem;
+fieldset div {
+    margin-bottom: 0.6rem;
 }
 
-.box-cards .box {
-    margin-bottom: 0;
+fieldset div label {
+    display: inline;
+    font-weight: 400;
 }
 
-/* =========================
-   RODAPÉ
-========================= */
+/* ========================= TEXTAREA ========================= */
+textarea {
+    width: 100%;
+    min-height: 150px;
+    padding: 0.75rem;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    resize: vertical;
+    font-family: "Lato", sans-serif;
+    font-size: 1rem;
+}
 
+/* ========================= FOCO DOS CAMPOS ========================= */
+select:focus,
+input[type="date"]:focus,
+textarea:focus {
+    outline: 2px solid var(--caramelo);
+    border-color: var(--marrom);
+}
+
+/* ========================= BOTÃO ENVIAR ========================= */
+input[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 0.9rem;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--caramelo);
+    color: var(--marrom);
+    font-family: "Lato", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--marrom);
+    color: var(--creme);
+}
+
+/* ========================= RODAPÉ ========================= */
 footer {
     background-color: var(--marrom);
     color: var(--creme);
@@ -298,5 +207,3 @@ footer p {
 #ultimaModificacao {
     color: var(--caramelo);
 }
-
-```

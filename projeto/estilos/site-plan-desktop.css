@@ -9,21 +9,16 @@
         max-width: 1200px;
         margin: 0 auto;
         flex-wrap: nowrap;
+        justify-content: space-between;
         padding: 1rem 2rem;
     }
 
-    #menu {
-        display: none;
-    }
-
-    .navigation {
-        display: flex;
+    nav {
         flex-direction: row;
-        justify-content: space-evenly;
         width: auto;
     }
 
-    .navigation a {
+    nav a {
         padding: 1rem 0.7rem;
     }
 
@@ -35,25 +30,16 @@
         font-size: 2.5rem;
     }
 
-    h2 {
-        font-size: 1.8rem;
-    }
-
-    section {
+    form {
         padding: 2rem;
     }
 
-    .cores {
-        grid-template-columns: repeat(4, 1fr);
+    fieldset {
+        padding: 1.5rem 2%;
     }
 
-    .wireframes {
-        grid-template-columns: 1fr 2fr;
-        align-items: start;
-    }
-
-    .box-cards {
-        grid-template-columns: repeat(3, 1fr);
+    input[type="submit"] {
+        width: 50%;
+        margin: 0 auto;
     }
 }
-
