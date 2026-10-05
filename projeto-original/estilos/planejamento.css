@@ -537,3 +537,162 @@ footer {
 .ultimaModificacao {
     color: var(--caramelo);
 }
+
+/* ---------- Base (mobile primeiro) ---------- */
+.fw1 {
+    max-width: 36rem;
+    margin: 0 auto;
+    padding: 1rem;
+    display: grid;
+    gap: 1rem;
+    color: var(--texto);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.5;
+}
+
+.fw1 fieldset {
+    margin: 0;
+    padding: 1rem;
+    background: var(--branco);
+    border: 2px solid var(--caramelo);
+    border-radius: 0.75rem;
+    display: grid;
+    gap: 0.5rem;
+}
+
+.fw1 legend {
+    padding: 0 0.5rem;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.15rem;
+    font-weight: bold;
+    color: var(--marrom);
+}
+
+.fw1 label {
+    font-weight: 600;
+    color: var(--marrom);
+}
+
+.fw1 .opcional {
+    font-weight: 400;
+    font-size: 0.9em;
+    color: var(--texto);
+}
+
+/* ---------- Campos de texto, select, data, textarea ---------- */
+.fw1 input[type="text"],
+.fw1 input[type="tel"],
+.fw1 input[type="email"],
+.fw1 input[type="number"],
+.fw1 input[type="date"],
+.fw1 select,
+.fw1 textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.65rem 0.75rem;
+    font: inherit;
+    color: var(--texto);
+    background: var(--creme);
+    border: 1px solid var(--marrom);
+    border-radius: 0.5rem;
+}
+
+.fw1 textarea {
+    resize: vertical;
+}
+
+.fw1 input:focus-visible,
+.fw1 select:focus-visible,
+.fw1 textarea:focus-visible {
+    outline: 3px solid var(--caramelo);
+    outline-offset: 2px;
+}
+
+/* ---------- Classificação por estrelas (radios) ---------- */
+.fw1 .classificacao {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+/* esconde o radio, mas mantém acessível pelo teclado */
+.fw1 .classificacao input {
+    position: absolute;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+}
+
+.fw1 .classificacao label {
+    padding: 0.4rem 0.75rem;
+    color: var(--caramelo);
+    background: var(--creme);
+    border: 1px solid var(--caramelo);
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
+.fw1 .classificacao input:checked+label {
+    background: var(--marrom);
+    border-color: var(--marrom);
+}
+
+.fw1 .classificacao input:focus-visible+label {
+    outline: 3px solid var(--caramelo);
+    outline-offset: 2px;
+}
+
+/* ---------- Checkboxes ---------- */
+.fw1 input[type="checkbox"] {
+    accent-color: var(--marrom);
+    width: 1.1rem;
+    height: 1.1rem;
+    margin-right: 0.4rem;
+    vertical-align: middle;
+}
+
+.fw1 input[type="checkbox"]+label {
+    display: inline-block;
+    margin-bottom: 0.4rem;
+    font-weight: 400;
+    color: var(--texto);
+}
+
+/* ---------- Botão ---------- */
+.fw1 input[type="submit"] {
+    padding: 0.85rem 1.25rem;
+    font: inherit;
+    font-weight: bold;
+    color: var(--creme);
+    background: var(--marrom);
+    border: 2px solid var(--marrom);
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.fw1 input[type="submit"]:hover {
+    background: var(--texto);
+    border-color: var(--caramelo);
+}
+
+.fw1 input[type="submit"]:focus-visible {
+    outline: 3px solid var(--caramelo);
+    outline-offset: 2px;
+}
+
+/* ---------- Mensagem de confirmação ---------- */
+.confirmacao {
+    max-width: 36rem;
+    margin: 1rem auto;
+    padding: 1.25rem;
+    background: var(--branco);
+    border: 2px solid var(--caramelo);
+    border-radius: 0.75rem;
+    color: var(--texto);
+}
+
+.confirmacao h2 {
+    margin-top: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    color: var(--marrom);
+}

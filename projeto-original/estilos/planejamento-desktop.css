@@ -65,5 +65,18 @@
     .redes-sociais {
         justify-content: flex-start;
     }
+/* ---------- Telas maiores ---------- */
+    .fw1 {
+        padding: 2rem;
+        gap: 1.5rem;
+    }
+    
+    .fw1 fieldset {
+        padding: 1.5rem;
+    }
+    
+    .fw1 input[type="checkbox"]+label {
+        width: 48%;
+    }
     
  }
