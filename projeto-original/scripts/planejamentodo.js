@@ -190,5 +190,33 @@ if (params.has("nome")) {
 
     }
 
+// =====================================================
+// REDIRECIONAMENTO AUTOMÁTICO
+// =====================================================
+
+    const contador = document.getElementById("contador");
+
+    if (contador) {
+
+        let segundos = 10;
+
+        const intervalo = setInterval(() => {
+
+            segundos--;
+
+            contador.textContent = segundos;
+
+            if (segundos <= 0) {
+
+                clearInterval(intervalo);
+
+                window.location.href = "index.html";
+
+            }
+
+        }, 1000);
+
+    }
+
 }
 
