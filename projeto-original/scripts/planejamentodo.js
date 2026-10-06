@@ -14,7 +14,7 @@ document.getElementById('ultimaModificacao').textContent =
 
 
 // =====================================================
-// FORMULÁRIO DE ENCOMENDA - BOLOS DA VOVÓ
+// FORMULÁRIO DE ENCOMENDA
 // =====================================================
 
 
@@ -24,10 +24,14 @@ document.getElementById('ultimaModificacao').textContent =
 
 const campoData = document.getElementById("data-entrega");
 
-if (campoData) {
+
+// Só executa se estiver na página do formulário
+if (campoData && campoData.tagName === "INPUT") {
+
     const hoje = new Date().toISOString().split("T")[0];
 
     campoData.min = hoje;
+
 }
 
 
@@ -36,6 +40,7 @@ if (campoData) {
 // -----------------------------------------------------
 
 const nomesDosBolos = {
+
     cenoura: "Bolo de Cenoura",
     fuba: "Bolo de Fubá",
     formigueiro: "Bolo Formigueiro",
@@ -44,24 +49,27 @@ const nomesDosBolos = {
     ninho: "Bolo de Leite Ninho",
     floresta: "Bolo Floresta Negra",
     brigadeiro: "Bolo de Brigadeiro"
+
 };
 
 
 // -----------------------------------------------------
-// 3. LER OS DADOS ENVIADOS PELO FORMULÁRIO
+// 3. LER OS DADOS DA URL
 // -----------------------------------------------------
 
 const params = new URLSearchParams(window.location.search);
 
 
 // -----------------------------------------------------
-// 4. FUNÇÃO PARA FORMATAR A DATA
+// 4. FORMATAR DATA
 // -----------------------------------------------------
 
 function formatarData(data) {
 
     if (!data) {
+
         return "";
+
     }
 
     const partes = data.split("-");
@@ -70,88 +78,117 @@ function formatarData(data) {
     const mes = partes[1];
     const dia = partes[2];
 
-    return `${ dia } /${mes}/${ ano } `;
+    return `${dia}/${mes}/${ano}`;
+
 }
 
 
 // -----------------------------------------------------
-// 5. PREENCHER A PÁGINA DE CONFIRMAÇÃO
+// 5. PREENCHER RESUMO DO PEDIDO
 // -----------------------------------------------------
 
 if (params.has("nome")) {
 
+    // Recupera os dados enviados pelo formulário
+
     const nome = params.get("nome");
+
     const telefone = params.get("telefone");
-    const email = params.get("email");
+
     const produto = params.get("produto");
+
     const quantidade = params.get("quantidade");
+
     const dataEntrega = params.get("data-entrega");
+
     const observacoes = params.get("observacoes");
 
 
-    // Nome
-    const campoNome = document.getElementById("confirmacao-nome");
+    // -------------------------------------------------
+    // NOME
+    // -------------------------------------------------
+
+    const campoNome = document.getElementById("nome");
 
     if (campoNome) {
-        campoNome.textContent = nome || "";
+
+        campoNome.textContent = nome || "Cliente";
+
     }
 
 
-    // Telefone
-    const campoTelefone = document.getElementById("confirmacao-telefone");
+    // -------------------------------------------------
+    // BOLO
+    // -------------------------------------------------
 
-    if (campoTelefone) {
-        campoTelefone.textContent = telefone || "";
-    }
-
-
-    // E-mail
-    const campoEmail = document.getElementById("confirmacao-email");
-
-    if (campoEmail) {
-
-        campoEmail.textContent = email || "Não informado";
-    }
-
-
-    // Produto
-    const campoProduto = document.getElementById("confirmacao-produto");
+    const campoProduto = document.getElementById("produto");
 
     if (campoProduto) {
 
         campoProduto.textContent =
             nomesDosBolos[produto] || "Bolo não informado";
+
     }
 
 
-    // Quantidade
+    // -------------------------------------------------
+    // QUANTIDADE
+    // -------------------------------------------------
+
     const campoQuantidade =
-        document.getElementById("confirmacao-quantidade");
+        document.getElementById("quantidade");
 
     if (campoQuantidade) {
 
-        campoQuantidade.textContent = quantidade || "";
+        campoQuantidade.textContent =
+            quantidade || "Não informado";
+
     }
 
 
-    // Data
-    const campoDataConfirmacao =
-        document.getElementById("confirmacao-data");
+    // -------------------------------------------------
+    // DATA
+    // -------------------------------------------------
 
-    if (campoDataConfirmacao) {
+    const campoDataResumo =
+        document.getElementById("data-entrega");
 
-        campoDataConfirmacao.textContent =
+    if (campoDataResumo) {
+
+        campoDataResumo.textContent =
             formatarData(dataEntrega);
+
     }
 
 
-    // Observações
+    // -------------------------------------------------
+    // TELEFONE
+    // -------------------------------------------------
+
+    const campoTelefone =
+        document.getElementById("telefone");
+
+    if (campoTelefone) {
+
+        campoTelefone.textContent =
+            telefone || "Não informado";
+
+    }
+
+
+    // -------------------------------------------------
+    // OBSERVAÇÕES
+    // -------------------------------------------------
+
     const campoObservacoes =
-        document.getElementById("confirmacao-observacoes");
+        document.getElementById("observacoes");
 
     if (campoObservacoes) {
 
         campoObservacoes.textContent =
-            observacoes || "Nenhuma observação.";
+            observacoes || "Nenhuma";
+
     }
+
 }
+
