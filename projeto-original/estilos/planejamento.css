@@ -87,90 +87,243 @@ body {
 
 .hero {
     min-height: 350px;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
     text-align: center;
+
     padding: 2rem 1rem;
-    /*background-color: #E8E8E8;*/
+
     position: relative;
-    background-image: url("../imagens/hero.webp");
-    background-size: cover;
-    background-position: center;
+
+    overflow: hidden;
 }
-/* camada escura para o texto ficar legível */ 
+
+
+/* =========================
+   IMAGENS DO CARROSSEL
+========================= */
+
+.hero-imagens {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 0;
+}
+
+.hero-slide {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    opacity: 0;
+
+    transition: opacity 0.8s ease;
+}
+
+.hero-slide.ativo {
+    opacity: 1;
+}
+
+
+/* =========================
+   CAMADA DE CONTRASTE
+========================= */
+
 .hero::before {
     content: "";
+
     position: absolute;
+
     inset: 0;
-    background: rgba(0, 0, 0, 0.1);
+
+    z-index: 1;
+
+    /*
+       Degradê mais forte atrás do texto
+       e mais suave no restante da imagem.
+    */
+
+    background:
+        linear-gradient(90deg,
+            rgba(45, 30, 20, 0.78) 0%,
+            rgba(45, 30, 20, 0.55) 45%,
+            rgba(45, 30, 20, 0.20) 100%);
 }
+
+
+/* =========================
+   CONTEÚDO DO BANNER
+========================= */
 
 .hero-conteudo {
-    position: relative;                 /* fica acima da camada escura */
-    z-index: 1;
-    max-width: 600px;
-    color: #fff;
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 650px;
+
+    color: var(--branco);
+
+    padding: 1rem;
 }
+
+
+/* =========================
+   TÍTULO
+========================= */
+
 .hero-conteudo h1 {
-    font-size: 1.8rem;
-    
-}
-.hero-conteudo p {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-}
-
-.hero h1 {
     font-family: "Pacifico", cursive;
+
     color: var(--creme);
+
     font-size: 2.5rem;
-    margin-bottom: 10rem;
+
+    line-height: 1.2;
+
+    margin-bottom: 1.2rem;
+
+    /*
+       Pequena sombra para melhorar
+       a leitura sobre a imagem.
+    */
+
+    text-shadow:
+        2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
-.hero p {
+
+/* =========================
+   TEXTO
+========================= */
+
+.hero-conteudo p {
     font-size: 1.1rem;
-    padding: 50px;
+
+    line-height: 1.6;
+
+    padding: 0 1rem;
+
+    margin-bottom: 1.5rem;
+
+    color: var(--branco);
+
+    text-shadow:
+        1px 1px 3px rgba(0, 0, 0, 0.7);
 }
+
+
+/* =========================
+   BOTÃO PRINCIPAL
+========================= */
 
 .botao-principal {
     display: inline-block;
+
     padding: 12px 24px;
-    background: #5C4033;
-    color: #fff;
+
+    background: var(--marrom);
+
+    color: var(--branco);
+
     text-decoration: none;
+
     border-radius: 6px;
+
+    font-weight: bold;
+
+    border: 2px solid var(--creme);
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
 }
 
-/* pontinhos */
+
+/* Efeito ao passar o mouse */
+
+.botao-principal:hover {
+    background: var(--caramelo);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   PONTINHOS DO CARROSSEL
+========================= */
+
 .hero-dots {
     display: flex;
+
     justify-content: center;
-    gap: 8px;
-    margin-top: 25px;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 1.5rem;
 }
 
-.hero-dots span {
-    width: 10px;
-    height: 10px;
+
+.hero-dots .dot {
+    width: 12px;
+    height: 12px;
+
+    padding: 0;
+
+    border: 2px solid var(--branco);
+
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.5);
+
+    background: transparent;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
 }
 
-.hero-dots span.ativo {
-    background: #fff;
+
+.hero-dots .dot.ativo {
+    background: var(--creme);
+
+    transform: scale(1.2);
 }
-/* onda */
+
+
+/* =========================
+   ONDA
+========================= */
+
 .hero-onda {
     position: absolute;
-    bottom: -30px;    /* evita linha fina entre hero e próxima seção */
-    left: 0;
-    width: 100%;
-    height: 60px;
-    z-index: 1;
-}
 
+    bottom: -30px;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 60px;
+
+    z-index: 3;
+}
 /* =========================
    MENU DE NAVEGAÇÃO
 ========================= */

@@ -59,11 +59,22 @@
                 </a>
         </div>
     </header>
-    <!-- CONTEÚDO PRINCIPAL teste -->
+    <!-- CONTEÚDO PRINCIPAL -->
     <main>
-
         <!-- BANNER PRINCIPAL -->
         <section class="hero">
+        
+            <!-- IMAGENS DO CARROSSEL -->
+            <div class="hero-imagens">
+            
+                <img src="imagens/hero.webp" alt="Bolo caseiro da Bolos da Vovó" class="hero-slide ativo">
+            
+                <img src="imagens/hero2.webp" alt="Bolos caseiros preparados com carinho" class="hero-slide">
+            
+            </div>
+        
+            <!-- camada escura -->
+            <div class="hero-overlay"></div>
         
             <div class="hero-conteudo">
         
@@ -77,21 +88,34 @@
                 <a href="bolos.html" class="botao-principal">
                     Conheça nossos bolos
                 </a>
-                
-
-                <!-- pontinhos do wireframe (opcional, para carrossel) -->
+        
+                <!-- pontinhos -->
                 <div class="hero-dots">
-                    <span class="ativo"></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>        
+        
+                    <button class="dot ativo" 
+                            aria-label="Mostrar primeira imagem">
+                    </button>
+        
+                    <button class="dot" aria-label="Mostrar segunda imagem">
+                        
+                    </button>
+        
+                </div>
+        
             </div>
+        
             <!-- onda no rodapé do hero -->
             <svg class="hero-onda" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
-                <path d="M0,60 C240,120 480,0 720,60 C960,120 1200,0 1440,60 L1440,120 L0,120 Z" fill="#ffffff" />
+        
+                <path d="M0,60 C240,120 480,0 720,60
+                         C960,120 1200,0 1440,60
+                         L1440,120 L0,120 Z" fill="#ffffff" />
+        
             </svg>
+        
         </section>
+
+       
         <section class="produtos-destaque">
             <h2>Nossos Bolos em Destaque <br>
                 O site Bolos da Vovó tem como finalidade apresentar

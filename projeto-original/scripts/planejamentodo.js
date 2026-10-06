@@ -190,9 +190,9 @@ if (params.has("nome")) {
 
     }
 
-// =====================================================
-// REDIRECIONAMENTO AUTOMÁTICO
-// =====================================================
+    // =====================================================
+    // REDIRECIONAMENTO AUTOMÁTICO
+    // =====================================================
 
     const contador = document.getElementById("contador");
 
@@ -218,5 +218,89 @@ if (params.has("nome")) {
 
     }
 
-}
+    // =====================================================
+    // CARROSSEL DO BANNER PRINCIPAL
+    // =====================================================
 
+    const slides =
+        document.querySelectorAll(".hero-slide");
+
+    const dots =
+        document.querySelectorAll(".hero-dots .dot");
+
+    let slideAtual = 0;
+
+
+    // Só executa se existirem imagens
+    if (slides.length > 0) {
+
+        function mostrarSlide(numero) {
+
+            slides.forEach((slide) => {
+
+                slide.classList.remove("ativo");
+
+            });
+
+
+            dots.forEach((dot) => {
+
+                dot.classList.remove("ativo");
+
+            });
+
+
+            slides[numero].classList.add("ativo");
+
+
+            if (dots[numero]) {
+
+                dots[numero].classList.add("ativo");
+
+            }
+
+
+            slideAtual = numero;
+
+        }
+
+
+        // =============================================
+        // CLIQUE NOS PONTINHOS
+        // =============================================
+
+        dots.forEach((dot, index) => {
+
+            dot.addEventListener("click", () => {
+
+                mostrarSlide(index);
+
+            });
+
+        });
+
+
+        // =============================================
+        // TROCA AUTOMÁTICA
+        // =============================================
+
+        if (slides.length > 1) {
+
+            setInterval(() => {
+
+                slideAtual++;
+
+                if (slideAtual >= slides.length) {
+
+                    slideAtual = 0;
+
+                }
+
+                mostrarSlide(slideAtual);
+
+            }, 5000);
+
+        }
+
+    }
+}
