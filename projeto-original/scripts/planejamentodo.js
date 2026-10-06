@@ -217,90 +217,77 @@ if (params.has("nome")) {
         }, 1000);
 
     }
+}
+    
+// =====================================================
+// CARROSSEL DO BANNER PRINCIPAL
+// =====================================================
 
-    // =====================================================
-    // CARROSSEL DO BANNER PRINCIPAL
-    // =====================================================
+const slides =
+    document.querySelectorAll(".hero-slide");
 
-    const slides =
-        document.querySelectorAll(".hero-slide");
+console.log("Quantidade de slides:", slides.length);
 
-    const dots =
-        document.querySelectorAll(".hero-dots .dot");
+const dots =
+    document.querySelectorAll(".hero-dots .dot");
 
-    let slideAtual = 0;
-
-
-    // Só executa se existirem imagens
-    if (slides.length > 0) {
-
-        function mostrarSlide(numero) {
-
-            slides.forEach((slide) => {
-
-                slide.classList.remove("ativo");
-
-            });
+let slideAtual = 0;
 
 
-            dots.forEach((dot) => {
+// Só executa se existirem imagens
+if (slides.length > 0) {
 
-                dot.classList.remove("ativo");
+    function mostrarSlide(numero) {
 
-            });
-
-
-            slides[numero].classList.add("ativo");
-
-
-            if (dots[numero]) {
-
-                dots[numero].classList.add("ativo");
-
-            }
-
-
-            slideAtual = numero;
-
-        }
-
-
-        // =============================================
-        // CLIQUE NOS PONTINHOS
-        // =============================================
-
-        dots.forEach((dot, index) => {
-
-            dot.addEventListener("click", () => {
-
-                mostrarSlide(index);
-
-            });
-
+        slides.forEach((slide) => {
+            slide.classList.remove("ativo");
         });
 
+        dots.forEach((dot) => {
+            dot.classList.remove("ativo");
+        });
 
-        // =============================================
-        // TROCA AUTOMÁTICA
-        // =============================================
+        slides[numero].classList.add("ativo");
 
-        if (slides.length > 1) {
-
-            setInterval(() => {
-
-                slideAtual++;
-
-                if (slideAtual >= slides.length) {
-
-                    slideAtual = 0;
-
-                }
-
-                mostrarSlide(slideAtual);
-
-            }, 5000);
-
+        if (dots[numero]) {
+            dots[numero].classList.add("ativo");
         }
 
+        slideAtual = numero;
     }
+
+
+    // =============================================
+    // CLIQUE NOS PONTINHOS
+    // =============================================
+
+    dots.forEach((dot, index) => {
+
+        dot.addEventListener("click", () => {
+            mostrarSlide(index);
+        });
+
+    });
+
+
+    // =============================================
+    // TROCA AUTOMÁTICA
+    // =============================================
+
+    if (slides.length > 1) {
+
+        setInterval(() => {
+
+            slideAtual++;
+
+            if (slideAtual >= slides.length) {
+                slideAtual = 0;
+            }
+
+            mostrarSlide(slideAtual);
+
+        }, 5000);
+
+    }
+
 }
