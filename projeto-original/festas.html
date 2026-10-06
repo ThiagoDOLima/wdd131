@@ -47,17 +47,19 @@
             </button>
             <!-- Navegação -->
             <nav class="navigation" id="menuLinks">
-                <a href="index.html" id="all">Página Inicial</a>
-                <a href="bolos.html" id="old">Nossos Bolos</a>
-                <a href="festas.html" id="new">Bolos para Festas</a>
-                <a href="encomendas.html" id="large">Encomendas</a>
-
+            
+                <a href="index.html">Início</a>
+            
+                <a href="bolos.html">Nossos Bolos</a>
+            
+                <a href="festas.html">Bolos para Festas</a>
+            
+                <a href="encomendas.html" class="menu-destaque">
+                    Encomende Agora
+                </a>
+            
             </nav>
 
-            <!-- Botão de encomenda -->
-            <a href="encomendas.html" class="botao-encomenda">
-                Encomende Agora
-            </a>
         </div>
     </header>
     <!-- CONTEÚDO PRINCIPAL -->
@@ -76,8 +78,23 @@
                 <div class="produtos-lista">
 
                     <div class="produto">
-                        <img src="imagens/bolo-chocolate.jpg" alt="Bolo de chocolate">
-                        <p>Bolo de chocolate com cobertura cremosa.</p>
+                        <img src="imagens/bolo-chocolate.jpg"
+                        alt="Bolo de chocolate" 
+                        loading="lazy">
+
+                        <div class="produto-info">
+                            <h3>Bolo de Chocolate</h3>
+
+                            <p>
+                                Fofinho, saboroso e perfeito para acompanhar
+                                aquele café da tarde.
+                            </p>
+
+                            <a href="encomendas.html">
+                                Encomende agora
+                            </a>
+
+                        </div>                        
                     </div>
 
                     <div class="produto">

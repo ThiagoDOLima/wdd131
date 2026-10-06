@@ -1,0 +1,13 @@
+/* =========================
+   TABLET
+========================= */
+
+@media screen and (min-width: 600px) {
+
+    .galeria {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 2rem;
+    }
+
+}

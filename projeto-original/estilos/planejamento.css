@@ -958,6 +958,363 @@ footer {
 
     color: var(--marrom);
 }
+.produto {
+    background-color: var(--branco);
 
+    border-radius: 12px;
 
+    overflow: hidden;
 
+    border: 1px solid rgba(92, 64, 51, 0.15);
+
+    box-shadow: 0 4px 12px rgba(92, 64, 51, 0.12);
+
+    display: flex;
+    flex-direction: column;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.produto:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 8px 20px rgba(92, 64, 51, 0.2);
+}
+
+.produto img {
+    width: 100%;
+
+    height: 240px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.produto-info {
+    display: flex;
+    flex-direction: column;
+
+    flex: 1;
+
+    padding: 1.2rem;
+
+    text-align: center;
+}
+
+.produto-info h3 {
+    margin: 0 0 0.7rem;
+
+    color: var(--marrom);
+
+    font-family: "Pacifico", cursive;
+
+    font-size: 1.4rem;
+}
+
+.produto-info p {
+    margin: 0 0 1.2rem;
+
+    color: var(--texto);
+
+    line-height: 1.5;
+
+    font-size: 0.95rem;
+}
+
+.botao-encomenda {
+    display: inline-block;
+
+    margin-top: auto;
+
+    padding: 0.7rem 1.4rem;
+
+    background-color: var(--marrom);
+
+    color: var(--branco);
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+    border-radius: 6px;
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.botao-encomenda:hover {
+    background-color: var(--caramelo);
+
+    transform: translateY(-2px);
+}
+
+.botao-encomenda:focus-visible {
+    outline: 3px solid var(--caramelo);
+
+    outline-offset: 3px;
+}
+
+/* =========================
+   CTA - ENCOMENDA
+========================= */
+
+.cta-encomenda {
+    padding: 4rem 1rem;
+
+    background-color: var(--caramelo);
+
+    text-align: center;
+}
+
+.cta-conteudo {
+    max-width: 700px;
+
+    margin: 0 auto;
+}
+
+.cta-encomenda .subtitulo {
+    color: var(--creme);
+}
+
+.cta-encomenda h2 {
+    margin: 0 0 1rem;
+
+    color: var(--branco);
+
+    font-family: "Pacifico", cursive;
+
+    font-size: 2.2rem;
+
+    line-height: 1.3;
+}
+
+.cta-encomenda p {
+    margin: 0 0 1.5rem;
+
+    color: var(--branco);
+
+    font-size: 1.05rem;
+
+    line-height: 1.6;
+}
+
+/* =========================
+   DESTAQUE PARA FESTAS
+========================= */
+
+.destaque-festas {
+    position: relative;
+
+    min-height: 380px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 4rem 1rem;
+
+    text-align: center;
+
+    background-image:
+        linear-gradient(rgba(50, 32, 20, 0.65),
+            rgba(50, 32, 20, 0.65)),
+        url("../imagens/bolo-festa.webp");
+
+    background-size: cover;
+
+    background-position: center;
+}
+
+.destaque-festas-conteudo {
+    max-width: 700px;
+
+    color: var(--branco);
+}
+
+.destaque-festas .subtitulo {
+    color: var(--creme);
+}
+
+.destaque-festas h2 {
+    margin: 0 0 1rem;
+
+    font-family: "Pacifico", cursive;
+
+    font-size: 2.2rem;
+
+    line-height: 1.3;
+}
+
+.destaque-festas p {
+    margin: 0 auto 1.5rem;
+
+    max-width: 600px;
+
+    font-size: 1.05rem;
+
+    line-height: 1.7;
+}
+
+/* =========================
+   SOBRE / NOSSA HISTÓRIA
+========================= */
+
+.sobre {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 2rem;
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: 4rem 1rem;
+}
+
+.sobre-imagem {
+    overflow: hidden;
+
+    border-radius: 12px;
+}
+
+.sobre-imagem img {
+    display: block;
+
+    width: 100%;
+
+    height: 100%;
+
+    min-height: 300px;
+
+    object-fit: cover;
+
+    transition: transform 0.4s ease;
+}
+
+.sobre-imagem:hover img {
+    transform: scale(1.03);
+}
+
+.sobre-conteudo {
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+.sobre-conteudo h2 {
+    margin: 0 0 1.2rem;
+
+    color: var(--marrom);
+
+    font-family: "Pacifico", cursive;
+
+    font-size: 2rem;
+
+    line-height: 1.3;
+}
+
+.sobre-conteudo p {
+    margin: 0 0 1rem;
+
+    color: var(--texto);
+
+    line-height: 1.7;
+}
+
+.sobre-conteudo .botao-principal {
+    align-self: flex-start;
+
+    margin-top: 0.5rem;
+}
+
+/* =========================
+   BENEFÍCIOS
+========================= */
+
+.beneficios {
+    padding: 4rem 1rem;
+
+    background-color: var(--creme);
+}
+
+.beneficios-container {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 1.5rem;
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+}
+
+.beneficio {
+    padding: 2rem 1.5rem;
+
+    background-color: var(--branco);
+
+    border-radius: 12px;
+
+    text-align: center;
+
+    border: 1px solid rgba(92, 64, 51, 0.12);
+
+    box-shadow: 0 4px 12px rgba(92, 64, 51, 0.08);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.beneficio:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 8px 20px rgba(92, 64, 51, 0.15);
+}
+
+.beneficio-icone {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 60px;
+
+    height: 60px;
+
+    margin: 0 auto 1rem;
+
+    background-color: var(--creme);
+
+    border-radius: 50%;
+
+    font-size: 1.8rem;
+}
+
+.beneficio h3 {
+    margin: 0 0 0.7rem;
+
+    color: var(--marrom);
+
+    font-size: 1.2rem;
+}
+
+.beneficio p {
+    margin: 0;
+
+    color: var(--texto);
+
+    line-height: 1.6;
+}
