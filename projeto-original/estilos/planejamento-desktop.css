@@ -78,5 +78,16 @@
     .fw1 input[type="checkbox"]+label {
         width: 48%;
     }
+    /* Galeria com 3 colunas */
+        .galeria {
+            grid-template-columns: repeat(3, 1fr);
+    
+            gap: 2rem;
+        }
+    
+        .galeria img {
+            height: 250px;
+        }
     
  }
+

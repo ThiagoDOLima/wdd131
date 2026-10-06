@@ -39,6 +39,7 @@ document.getElementById('ultimaModificacao').textContent =
 //    createTempleCard(templos.filter(templo => templo.area < 50000));
 //});
 
+// Criação da Galeria 
 const cutoffOld = new Date('1900-01-01');
 const cutoffNew = new Date('2000-12-31');
 

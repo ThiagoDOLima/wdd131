@@ -850,4 +850,114 @@ footer {
     font-family: Georgia, "Times New Roman", serif;
     color: var(--marrom);
 }
+/* =========================
+   GALERIA DE BOLOS
+========================= */
+
+.galeria {
+    display: grid;
+
+    /* Celular */
+    grid-template-columns: 1fr;
+
+    gap: 2rem;
+
+    width: min(100% - 2rem, 1100px);
+
+    margin: 2rem auto;
+
+    padding: 1rem;
+}
+
+
+/* =========================
+   CARD DO BOLO
+========================= */
+
+.galeria section {
+    background-color: var(--branco);
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    border: 1px solid rgba(92, 64, 51, 0.15);
+
+    box-shadow: 0 4px 12px rgba(92, 64, 51, 0.12);
+
+    padding-bottom: 1.5rem;
+
+    text-align: left;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* Efeito quando passar o mouse */
+
+.galeria section:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 8px 20px rgba(92, 64, 51, 0.20);
+}
+
+
+/* =========================
+   IMAGEM
+========================= */
+
+.galeria img {
+    width: 100%;
+
+    height: 340px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* =========================
+   TÍTULO
+========================= */
+
+.galeria h3 {
+    font-family: "Pacifico", cursive;
+
+    color: var(--marrom);
+
+    font-size: 1.5rem;
+
+    text-align: center;
+
+    margin: 1.2rem 1rem 1rem;
+}
+
+
+/* =========================
+   INFORMAÇÕES
+========================= */
+
+.galeria p {
+    margin: 0.6rem 1.2rem;
+
+    color: var(--texto);
+
+    font-size: 0.95rem;
+
+    line-height: 1.5;
+}
+
+
+/* Destaque dos rótulos */
+
+.galeria .label {
+    font-weight: bold;
+
+    color: var(--marrom);
+}
+
+
 

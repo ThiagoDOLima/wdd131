@@ -289,5 +289,146 @@ if (slides.length > 0) {
         }, 5000);
 
     }
+}   
 
+// Página Bolos Galeria
+const bolos = [
+    {
+        nomeDoBolo: "Bolo de Cenoura",
+        descricao: "Bolo caseiro de cenoura, macio e coberto com uma deliciosa calda de chocolate.",
+        sabor: "Cenoura com chocolate",
+        tamanho: "1 kg",
+        urlDaImagem:
+            "https://images.pexels.com/photos/37711037/pexels-photo-37711037.jpeg"
+    },
+
+    {
+        nomeDoBolo: "Bolo de Chocolate",
+        descricao: "Bolo de chocolate fofinho e saboroso, perfeito para acompanhar um café.",
+        sabor: "Chocolate",
+        tamanho: "1 kg",
+        urlDaImagem:
+            "https://images.mrcook.app/recipe-image/0193b68d-05a3-7f4c-a6a3-a2272bc44371?cacheKey=U3VuLCAxMiBKYW4gMjAyNSAwMzozODoyNCBHTVQ%3D"
+    },
+
+    {
+        nomeDoBolo: "Bolo de Fubá",
+        descricao: "Bolo de fubá tradicional, fofinho e dourado, perfeito para o café da tarde.",
+        sabor: "Fubá",
+        tamanho: "1 kg",
+        urlDaImagem:
+            "https://snapcalorie-webflow-website.s3.us-east-2.amazonaws.com/media/food_pics_v2/medium/bolo_de_fuba.jpg"
+    },
+
+    {
+        nomeDoBolo: "Bolo Formigueiro",
+        descricao: "Bolo branco fofinho com deliciosos pedacinhos de chocolate.",
+        sabor: "Baunilha com chocolate",
+        tamanho: "1 kg",
+        urlDaImagem:
+            "https://d2qcpt1idvpipw.cloudfront.net/recipes/2020/10/bolo-formigueiro-5.jpg"
+    },
+
+    {
+        nomeDoBolo: "Bolo de Laranja",
+        descricao: "Bolo caseiro de laranja, leve, aromático e preparado para acompanhar um café.",
+        sabor: "Laranja",
+        tamanho: "1 kg",
+        urlDaImagem:
+            "https://www.cairo24.com/Upload/libfiles/74/8/595.jpg"
+    },
+
+    {
+        nomeDoBolo: "Bolo de Milho",
+        descricao: "Bolo de milho cremoso e saboroso, inspirado nas receitas tradicionais da família.",
+        sabor: "Milho",
+        tamanho: "1 kg",
+        urlDaImagem:
+            "https://img0.didiglobal.com/static/soda_public/do1_8wb9ZakZPFBKANYLvBjb225094176"
+    },
+
+    {
+        nomeDoBolo: "Bolo de Leite Ninho",
+        descricao: "Bolo macio preparado com leite Ninho, ideal para momentos especiais.",
+        sabor: "Leite Ninho",
+        tamanho: "1 kg",
+        urlDaImagem:
+            "https://images.cooknenjoy.com/uploads/2023/09/Bolo-de-Leite-Ninho-de-Liquidificador-02-1200x676.jpg"
+    },
+
+    {
+        nomeDoBolo: "Bolo Floresta Negra",
+        descricao: "Bolo especial de chocolate com recheio cremoso, cerejas e cobertura de chantilly.",
+        sabor: "Chocolate com cereja",
+        tamanho: "1,5 kg",
+        urlDaImagem:
+            "https://tzgmgztvdcwfbqivozai.supabase.co/storage/v1/object/public/blog-images/05e40e3d-63e6-4440-99e9-30a5bd7a4ce1/41e27e63-4ef8-46d8-801b-060b09d4d256.png"
+    },
+
+    {
+        nomeDoBolo: "Bolo de Brigadeiro",
+        descricao: "Bolo de chocolate recheado e coberto com brigadeiro cremoso e granulado.",
+        sabor: "Chocolate e brigadeiro",
+        tamanho: "1,5 kg",
+        urlDaImagem:
+            "https://www.guiadasemana.com.br/contentFiles/image/2022/11/FEA/69403_bolo-brigadeiro-1.jpg"
+    }
+];
+
+createBoloCard(bolos);
+
+
+function createBoloCard(bolos) {
+
+    document.querySelector(".galeria").innerHTML = "";
+
+    bolos.forEach(bolo => {
+
+        let card = document.createElement("section");
+
+        let name = document.createElement("h3");
+
+        let descricao = document.createElement("p");
+
+        let sabor = document.createElement("p");
+
+        let tamanho = document.createElement("p");
+
+        let img = document.createElement("img");
+
+
+        name.textContent = bolo.nomeDoBolo;
+
+        descricao.innerHTML =
+            `<span class="label">Descrição:</span> ${bolo.descricao}`;
+
+        sabor.innerHTML =
+            `<span class="label">Sabor:</span> ${bolo.sabor}`;
+
+        tamanho.innerHTML =
+            `<span class="label">Tamanho:</span> ${bolo.tamanho}`;
+
+
+        img.setAttribute("src", bolo.urlDaImagem);
+
+        img.setAttribute(
+            "alt",
+            bolo.descricao
+        );
+
+        img.setAttribute("loading", "lazy");
+
+
+        card.appendChild(name);
+        card.appendChild(descricao);
+        card.appendChild(sabor);
+        card.appendChild(tamanho);
+        card.appendChild(img);
+
+
+        document
+            .querySelector(".galeria")
+            .appendChild(card);
+
+    });
 }
