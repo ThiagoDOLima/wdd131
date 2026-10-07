@@ -88,6 +88,16 @@
     .galeria img {
         height: 250px;
     }
+    /* Galeria com 3 colunas */
+    .galeria-festa {
+        grid-template-columns: repeat(3, 1fr);
+    
+        gap: 2rem;
+    }
+    
+    .galeria-festa img {
+        height: 250px;
+    }
 /* =========================
    CTA - ENCOMENDA
 ========================= */

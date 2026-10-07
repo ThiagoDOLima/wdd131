@@ -291,7 +291,7 @@ if (slides.length > 0) {
     }
 }   
 
-// Página Bolos Galeria
+// Página Nossos Bolos Galeria
 const bolos = [
     {
         nomeDoBolo: "Bolo de Cenoura",
@@ -432,3 +432,4 @@ function createBoloCard(bolos) {
 
     });
 }
+
