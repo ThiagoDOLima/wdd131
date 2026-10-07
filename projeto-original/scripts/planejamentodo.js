@@ -396,6 +396,8 @@ function createBoloCard(bolos) {
 
         let img = document.createElement("img");
 
+        let botao = document.createElement("a");
+
 
         name.textContent = bolo.nomeDoBolo;
 
@@ -418,12 +420,23 @@ function createBoloCard(bolos) {
 
         img.setAttribute("loading", "lazy");
 
+        // Botão de encomenda
+        botao.textContent = "Encomendar este bolo";
 
+        botao.setAttribute(
+            "href",
+            `encomendas.html ? bolo = ${ encodeURIComponent(bolo.nomeDoBolo) } `
+        );
+
+        botao.classList.add("botao-encomenda");
+
+        card.appendChild(img);
         card.appendChild(name);
         card.appendChild(descricao);
         card.appendChild(sabor);
         card.appendChild(tamanho);
-        card.appendChild(img);
+        
+        card.appendChild(botao);
 
 
         document

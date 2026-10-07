@@ -74,12 +74,15 @@ const bolosFesta = [
     }
 ];
 
+
 createBoloFestaCard(bolosFesta);
 
 
 function createBoloFestaCard(bolos) {
 
-    document.querySelector(".galeria-festa").innerHTML = "";
+    const galeria = document.querySelector(".galeria-festa");
+
+    galeria.innerHTML = "";
 
     bolos.forEach(bolo => {
 
@@ -95,19 +98,29 @@ function createBoloFestaCard(bolos) {
 
         let img = document.createElement("img");
 
+        let botao = document.createElement("a");
 
+
+        // Nome do bolo
         name.textContent = bolo.nomeDoBolo;
 
+
+        // Descrição
         descricao.innerHTML =
             `<span class="label" > Descrição:</span > ${ bolo.descricao } `;
 
+
+        // Sabor
         sabor.innerHTML =
             `<span class="label" > Sabor:</span > ${ bolo.sabor } `;
 
+
+        // Tamanho
         tamanho.innerHTML =
             `<span class="label" > Tamanho:</span > ${ bolo.tamanho } `;
 
 
+        // Imagem
         img.setAttribute("src", bolo.urlDaImagem);
 
         img.setAttribute(
@@ -118,17 +131,30 @@ function createBoloFestaCard(bolos) {
         img.setAttribute("loading", "lazy");
 
 
+        // Botão de encomenda
+        botao.textContent = "Encomendar este bolo";
+
+        botao.setAttribute(
+            "href",
+            `encomendas.html ? bolo = ${ encodeURIComponent(bolo.nomeDoBolo) } `
+        );
+
+        botao.classList.add("botao-encomenda");
+
+
+        // Monta o card
+        card.appendChild(img);
         card.appendChild(name);
         card.appendChild(descricao);
         card.appendChild(sabor);
         card.appendChild(tamanho);
-        card.appendChild(img);
+        card.appendChild(botao);
 
 
-        document
-            .querySelector(".galeria-festa")
-            .appendChild(card);
+        // Adiciona o card na galeria
+        galeria.appendChild(card);
 
     });
 }
+
 
