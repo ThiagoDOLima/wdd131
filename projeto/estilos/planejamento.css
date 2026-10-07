@@ -69,19 +69,6 @@ body {
     background: #333;
 }
 
-/* botão encomende */
-.botao-encomenda {
-    order: 1;
-    /* fica entre o logo e o hambúrguer */
-    padding: 8px 14px;
-    background: #5C4033;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 6px;
-    font-size: 0.9rem;
-    white-space: nowrap;
-}
-
 /* =========================
    BANNER PRINCIPAL
 ========================= */
@@ -1042,6 +1029,7 @@ footer {
     font-size: 0.95rem;
 }
 
+/* botão encomenda */
 .botao-encomenda {
     display: inline-block;
 
