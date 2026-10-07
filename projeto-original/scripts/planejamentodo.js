@@ -425,7 +425,7 @@ function createBoloCard(bolos) {
 
         botao.setAttribute(
             "href",
-            `encomendas.html ? bolo = ${ encodeURIComponent(bolo.nomeDoBolo) } `
+            `encomendas.html? bolo = ${ encodeURIComponent(bolo.nomeDoBolo) } `
         );
 
         botao.classList.add("botao-encomenda");
