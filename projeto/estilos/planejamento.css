@@ -705,7 +705,7 @@ footer {
     display: grid;
     gap: 1rem;
     color: var(--texto);
-    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-family: system-ui, "Segoe UI", Roboto, sans-serif;
     line-height: 1.5;
 }
 
@@ -793,7 +793,7 @@ footer {
 
 .fw1 .classificacao input:checked+label {
     background: var(--marrom);
-    border-color: var(--marrom);
+    border-color: var(--texto);
 }
 
 .fw1 .classificacao input:focus-visible+label {
