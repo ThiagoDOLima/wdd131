@@ -41,6 +41,7 @@ if (campoData && campoData.tagName === "INPUT") {
 
 const nomesDosBolos = {
 
+    // Bolos tradicionais
     cenoura: "Bolo de Cenoura",
     fuba: "Bolo de Fubá",
     formigueiro: "Bolo Formigueiro",
@@ -49,6 +50,16 @@ const nomesDosBolos = {
     ninho: "Bolo de Leite Ninho",
     floresta: "Bolo Floresta Negra",
     brigadeiro: "Bolo de Brigadeiro"
+
+    // Bolos para festas
+    aniversario: "Bolo de Aniversário",
+    morango: "Bolo de Morango",
+    casamento: "Bolo de Casamento",
+    decorado: "Bolo Decorado",
+    festaInfantil: "Bolo de Festa Infantil",
+    redVelvet: "Bolo Red Velvet",
+    chocolateEspecial: "Bolo de Chocolate Especial",
+    flores: "Bolo de Flores"
 
 };
 
