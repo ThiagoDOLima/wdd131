@@ -695,7 +695,7 @@ footer {
 }
 
 .ultimaModificacao {
-    color: var(--caramelo);
+    color: var(--branco);
 }
 
 /* ---------- Base (mobile primeiro) ---------- */
@@ -1087,13 +1087,13 @@ footer {
 }
 
 .cta-encomenda .subtitulo {
-    color: var(--creme);
+    color: var(--marrom);
 }
 
 .cta-encomenda h2 {
     margin: 0 0 1rem;
 
-    color: var(--branco);
+    color: var(--marrom);
 
     font-family: "Pacifico", cursive;
 
@@ -1105,7 +1105,7 @@ footer {
 .cta-encomenda p {
     margin: 0 0 1.5rem;
 
-    color: var(--branco);
+    color: var(--marrom);
 
     font-size: 1.05rem;
 
@@ -1137,14 +1137,23 @@ footer {
     background-position: center;
 }
 
-.destaque-festas-conteudo {
-    max-width: 700px;
+.destaque-festas::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.45);
+}
 
+.destaque-festas-conteudo {
+    position: relative;
+    z-index: 1;
+
+    max-width: 700px;
     color: var(--branco);
 }
 
 .destaque-festas .subtitulo {
-    color: var(--creme);
+    color: var(--branco);
 }
 
 .destaque-festas h2 {
