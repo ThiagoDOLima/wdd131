@@ -49,7 +49,7 @@ const nomesDosBolos = {
     milho: "Bolo de Milho",
     ninho: "Bolo de Leite Ninho",
     floresta: "Bolo Floresta Negra",
-    brigadeiro: "Bolo de Brigadeiro"
+    brigadeiro: "Bolo de Brigadeiro",
 
     // Bolos para festas
     aniversario: "Bolo de Aniversário",
