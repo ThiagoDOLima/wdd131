@@ -419,6 +419,14 @@ const bolos = [
         tamanho: "1,5 kg",
         urlDaImagem:
             "https://www.guiadasemana.com.br/contentFiles/image/2022/11/FEA/69403_bolo-brigadeiro-1.jpg"
+    },
+
+    {
+        nomeDoBolo: "Bolo de Coco",
+        descricao: "Bolo de coco fofinho e saboroso, perfeito para deixar qualquer momento ainda mais especial.",
+        sabor: "Coco",
+        tamanho: "1 kg",
+        urlDaImagem: "imagens/bolo-coco.jpg"
     }
 
 ];
