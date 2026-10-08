@@ -11,6 +11,7 @@
     --caramelo: #C68E50;
     --branco: #FFFFFF;
     --texto: #333333;
+    --caramelo-claro: #E3B77F;
 }
 
 /* =========================
@@ -239,7 +240,7 @@ body {
 /* Efeito ao passar o mouse */
 
 .botao-principal:hover {
-    background-color: var(--caramelo);
+    background-color: var(--texto);
     border-color: var(--caramelo);
     transform: translateY(-2px);
 }
@@ -355,7 +356,7 @@ nav {
 }
 
 .navigation a:hover {
-    background-color: #C68E50;
+    background-color: var(--caramelo-claro);
     color: #5C4033;
     font-weight: 700;
 }
@@ -432,7 +433,7 @@ li {
 }
 
 .logo-slogan {
-    color: var(--caramelo);
+    color: var(--marrom);
     font-style: italic;
 }
 /* BANNER */
@@ -491,7 +492,7 @@ tr:nth-child(even) {
 
 .caramelo {
     background-color: #C68E50;
-    color: white;
+    color: var(--marrom);
 }
 
 .branco {
@@ -646,10 +647,8 @@ footer {
 
 /* Títulos */
 .footer-coluna h3 {
-    color: var(--caramelo);
-    font-family: "Playfair Display", serif;
-    font-size: 1.1rem;
-    margin-bottom: 0.8rem;
+    color: var(--caramelo-claro);
+    /* resto igual */
 }
 
 /* Links */
@@ -663,7 +662,7 @@ footer {
 
 /* Efeito ao passar o mouse */
 .footer-coluna a:hover {
-    color: var(--caramelo);
+    color: var(--caramelo-claro);
     text-decoration: underline;
 }
 
@@ -785,7 +784,7 @@ footer {
 
 .fw1 .classificacao label {
     padding: 0.4rem 0.75rem;
-    color: var(--caramelo);
+    color: var(--marrom);
     background: var(--creme);
     border: 1px solid var(--caramelo);
     border-radius: 2rem;
@@ -1074,9 +1073,7 @@ footer {
 
 .cta-encomenda {
     padding: 4rem 1rem;
-
-    background-color: var(--caramelo);
-
+    background-color: var(--caramelo-claro);
     text-align: center;
 }
 
@@ -1141,7 +1138,7 @@ footer {
     content: "";
     position: absolute;
     inset: 0;
-    background-color: rgba(0, 0, 0, 0.45);
+    background-color: rgba(0, 0, 0, 0.65);
 }
 
 .destaque-festas-conteudo {
