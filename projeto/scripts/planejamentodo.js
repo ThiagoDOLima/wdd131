@@ -43,6 +43,7 @@ const nomesDosBolos = {
 
     // Bolos tradicionais
     cenoura: "Bolo de Cenoura",
+    chocolate: "Bolo de Chocolate",
     fuba: "Bolo de Fubá",
     formigueiro: "Bolo Formigueiro",
     laranja: "Bolo de Laranja",
@@ -70,6 +71,38 @@ const nomesDosBolos = {
 
 const params = new URLSearchParams(window.location.search);
 
+// -----------------------------------------------------
+// RECUPERAR BOLO DO LOCALSTORAGE
+// -----------------------------------------------------
+
+if (!params.has("nome")) {
+
+    const campoProduto =
+        document.getElementById("produto");
+
+    const boloEscolhido =
+        localStorage.getItem("boloEscolhido");
+
+
+    if (campoProduto && boloEscolhido) {
+
+        const opcaoEncontrada =
+            Array.from(campoProduto.options).find(
+                opcao =>
+                    opcao.textContent.trim() === boloEscolhido
+            );
+
+
+        if (opcaoEncontrada) {
+
+            campoProduto.value =
+                opcaoEncontrada.value;
+
+        }
+
+    }
+
+}
 
 // -----------------------------------------------------
 // 4. FORMATAR DATA
