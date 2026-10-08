@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nossos Bolos | Bolos da Vovó</title>
+    <!--**Nome do site: Bolos da Vovó**
+
+    O nome Bolos da Vovó foi escolhido para transmitir a sensação de carinho, 
+    tradição e aconchego associada aos bolos caseiros. 
+    A proposta é valorizar receitas que remetem aos sabores da família e 
+    proporcionar aos clientes uma experiência acolhedora.
+    -->
+    <meta name="description"
+        content="Bolos da Vovó: bolos caseiros feitos com carinho e dedicação. Conheça nossos sabores, confira opções para festas e faça sua encomenda.">
+    <meta name="author" content="Thiago de Oliveira Lima">
+
+    <!-- define o estilo base (mobile), sem media queries.-->
+    <link rel="stylesheet" href="estilos/planejamento.css">
+    
+    <!--contém as media queries (min-width: 600px) que sobrescrevem certas regras quando a tela é maior.-->
+    <link rel="stylesheet" href="estilos/planejamento-talblet.css">
+    
+    
+    <!--contém as media queries (min-width: 768px) que sobrescrevem certas regras quando a tela é maior.-->
+    <link rel="stylesheet" href="estilos/planejamento-desktop.css">
+
+
+    <!-- Script JavaScript -->
+    <script src="scripts/planejamentodo.js" defer></script>
+
+    <!-- Fontes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+</head>
+<!-- CABEÇALHO teste-->
+
+<body>
+    <header>
+        <div class="header-container">
+            <!--<h1>Bolos da Vovó </h1> -->
+            <img src="imagens/logo.jpg" alt="Bolos da Vovó">
+
+            <!-- Botão do menu para celular -->
+            <button id="menu" aria-label="Abrir menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <!-- Navegação -->
+            <nav class="navigation" id="menuLinks">
+
+                <a href="index.html">Início</a>
+
+                <a href="bolos.html">Nossos Bolos</a>
+
+                <a href="festas.html">Bolos para Festas</a>
+
+                <a href="encomendas.html" class="menu-destaque">
+                    Encomende Agora
+                </a>
+
+            </nav>
+
+        </div>
+    </header>
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main>
+        <div class="galeria">
+
+        </div>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <!-- Menu -->
+            <div class="footer-coluna">
+
+                <h3>Menu</h3>
+
+                <a href="bolos.html">Nossos Bolos</a>
+                <a href="festas.html">Bolos para Festas</a>
+                <a href="encomendas.html">Encomendas</a>
+
+            </div>
+            <!-- Suporte -->
+            <div class="footer-coluna">
+
+                <h3>Atendimento</h3>
+
+                <a href="encomendas.html">Faça sua encomenda</a>
+                <a href="referencias.html">
+                    Referências
+                </a>
+
+            </div>
+            <!-- Contato -->
+            <div class="footer-coluna">
+
+                <h3>Entre em contato</h3>
+
+                <p>📍 São Paulo - SP</p>
+                <p>📞 (11) 99999-9999</p>
+
+            </div>
+            <!-- Redes sociais -->
+            <div class="footer-coluna">
+
+                <h3>Conecte-se conosco</h3>
+
+                <div class="redes-sociais">
+
+                    <a href="https://www.facebook.com/?locale=pt_BR" aria-label="Facebook">
+                        Facebook
+                    </a>
+
+                    <a href="https://www.instagram.com/" aria-label="Instagram">
+                        Instagram
+                    </a>
+
+
+                </div>
+
+            </div>
+        </div>
+        <!-- Direitos autorais -->
+        <div class="footer-final">
+
+            <p>
+                &copy; <span id="currentyear"></span>
+                Bolos da Vovó | Thiago de Oliveira Lima |
+                BYU-Pathway | WDD 131
+            </p>
+
+            <p class="ultimaModificacao" id="ultimaModificacao"></p>
+        </div>
+
+    </footer>
+</body>
+
+</html>
