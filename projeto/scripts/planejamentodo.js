@@ -270,7 +270,6 @@ if (params.has("nome")) {
 const slides =
     document.querySelectorAll(".hero-slide");
 
-console.log("Quantidade de slides:", slides.length);
 
 const dots =
     document.querySelectorAll(".hero-dots .dot");
