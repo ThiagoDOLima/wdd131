@@ -291,8 +291,12 @@ if (slides.length > 0) {
     }
 }   
 
-// Página Nossos Bolos Galeria
+// =====================================================
+// GALERIA DE BOLOS
+// =====================================================
+
 const bolos = [
+
     {
         nomeDoBolo: "Bolo de Cenoura",
         descricao: "Bolo caseiro de cenoura, macio e coberto com uma deliciosa calda de chocolate.",
@@ -373,76 +377,131 @@ const bolos = [
         urlDaImagem:
             "https://www.guiadasemana.com.br/contentFiles/image/2022/11/FEA/69403_bolo-brigadeiro-1.jpg"
     }
+
 ];
+
 
 createBoloCard(bolos);
 
 
+// =====================================================
+// CRIAR CARDS DOS BOLOS
+// =====================================================
+
 function createBoloCard(bolos) {
 
-    document.querySelector(".galeria").innerHTML = "";
+    const galeria =
+        document.querySelector(".galeria");
+
+    if (!galeria) {
+
+        return;
+
+    }
+
+    galeria.innerHTML = "";
+
 
     bolos.forEach(bolo => {
 
-        let card = document.createElement("section");
+        const card =
+            document.createElement("section");
 
-        let name = document.createElement("h3");
+        const name =
+            document.createElement("h3");
 
-        let descricao = document.createElement("p");
+        const descricao =
+            document.createElement("p");
 
-        let sabor = document.createElement("p");
+        const sabor =
+            document.createElement("p");
 
-        let tamanho = document.createElement("p");
+        const tamanho =
+            document.createElement("p");
 
-        let img = document.createElement("img");
+        const img =
+            document.createElement("img");
 
-        let botao = document.createElement("a");
+        const botao =
+            document.createElement("a");
 
 
-        name.textContent = bolo.nomeDoBolo;
+        // Nome
+        name.textContent =
+            bolo.nomeDoBolo;
 
+
+        // Descrição
         descricao.innerHTML =
             `<span class="label">Descrição:</span> ${bolo.descricao}`;
 
+
+        // Sabor
         sabor.innerHTML =
             `<span class="label">Sabor:</span> ${bolo.sabor}`;
 
+
+        // Tamanho
         tamanho.innerHTML =
             `<span class="label">Tamanho:</span> ${bolo.tamanho}`;
 
 
-        img.setAttribute("src", bolo.urlDaImagem);
+        // Imagem
+        img.setAttribute(
+            "src",
+            bolo.urlDaImagem
+        );
 
         img.setAttribute(
             "alt",
             bolo.descricao
         );
 
-        img.setAttribute("loading", "lazy");
+        img.setAttribute(
+            "loading",
+            "lazy"
+        );
 
-        // Botão de encomenda
-        botao.textContent = "Encomendar este bolo";
+
+        // Botão
+        botao.textContent =
+            "Encomendar este bolo";
 
         botao.setAttribute(
             "href",
-            `encomendas.html? bolo = ${ encodeURIComponent(bolo.nomeDoBolo) } `
+            "encomendas.html"
         );
 
-        botao.classList.add("botao-encomenda");
+        botao.classList.add(
+            "botao-encomenda"
+        );
 
+
+        // =================================================
+        // LOCALSTORAGE
+        // =================================================
+
+        botao.addEventListener("click", () => {
+
+            localStorage.setItem(
+                "boloEscolhido",
+                bolo.nomeDoBolo
+            );
+
+        });
+
+
+        // Monta o card
         card.appendChild(img);
         card.appendChild(name);
         card.appendChild(descricao);
         card.appendChild(sabor);
         card.appendChild(tamanho);
-        
         card.appendChild(botao);
 
 
-        document
-            .querySelector(".galeria")
-            .appendChild(card);
+        galeria.appendChild(card);
 
     });
-}
 
+}
